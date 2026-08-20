@@ -1,0 +1,3193 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    AllowFilters = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    AllowEdits = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =0
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =15300
+    DatasheetFontHeight =10
+    ItemSuffix =251
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0xbd8c62b98ddfe240
+    End
+    RecordSource ="SELECT TBLDECLARATION.* FROM TBLDECLARATION; "
+    Caption ="Déclaration"
+    BeforeUpdate ="[Event Procedure]"
+    OnOpen ="[Event Procedure]"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnActivate ="[Event Procedure]"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+            Width =850
+            Height =850
+        End
+        Begin Line
+            Width =1701
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+            Width =1701
+            Height =1701
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BackStyle =0
+            Width =4536
+            Height =2835
+            LabelX =-1701
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            Width =1701
+            LabelX =-1701
+            BackColor =-2147483643
+            ForeColor =-2147483640
+            AsianLineBreak =255
+        End
+        Begin ListBox
+            SpecialEffect =2
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            Width =1701
+            LabelX =-1701
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+            Width =1701
+            Height =1701
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+        End
+        Begin ToggleButton
+            Width =283
+            Height =283
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin Tab
+            BackStyle =0
+            Width =5103
+            Height =3402
+        End
+        Begin Page
+            Width =1701
+            Height =1701
+        End
+        Begin FormHeader
+            Height =0
+            BackColor =16628127
+            Name ="EntêteFormulaire"
+        End
+        Begin Section
+            Height =8790
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin TextBox
+                    OverlapFlags =93
+                    IMESentenceMode =3
+                    Left =2295
+                    Top =225
+                    Width =1116
+                    ColumnWidth =1620
+                    Name ="TxtDecDate"
+                    ControlSource ="DecDate"
+                    Format ="Short Date"
+                    StatusBarText ="Declaration Date"
+                    BeforeUpdate ="[Event Procedure]"
+                    FontName ="Tahoma"
+                    InputMask ="00/00/9999;0;_"
+                    OnKeyDown ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =135
+                            Top =210
+                            Width =2130
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDate"
+                            Caption ="Date de déclaration:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =13050
+                    Top =240
+                    Width =1131
+                    ColumnWidth =2700
+                    TabIndex =2
+                    Name ="TxtDecDateCreation"
+                    ControlSource ="DecDateCreation"
+                    Format ="Short Date"
+                    StatusBarText ="Declaration Date De Creation"
+                    FontName ="Tahoma"
+                    InputMask ="00/00/9999;0;_"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =10200
+                            Top =210
+                            Width =2850
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDateCreation"
+                            Caption ="Date d'enregistrement:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListRows =16
+                    Left =2280
+                    Top =1140
+                    Width =2826
+                    ColumnWidth =1815
+                    TabIndex =3
+                    Name ="CmbDecDeclarantEntNumero"
+                    ControlSource ="DecDeclarantEntNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLENTITE.EntNumero, TBLENTITE.EntNom FROM TBLENTITE ORDER BY TBLENTITE.E"
+                        "ntNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Declarant Entite"
+                    FontName ="Tahoma"
+                    OnNotInList ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =135
+                            Top =1125
+                            Width =2145
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDeclarantEntNumero"
+                            Caption ="Entité:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =93
+                    IMESentenceMode =3
+                    Left =7680
+                    Top =1140
+                    Width =2256
+                    TabIndex =4
+                    Name ="TxtDecDeclarantNom"
+                    ControlSource ="DecDeclarantNom"
+                    StatusBarText ="Declarant Nom"
+                    FontName ="Tahoma"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =5400
+                            Top =1140
+                            Width =2250
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDeclarantNom"
+                            Caption ="Nom du déclarant:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =12465
+                    Top =1140
+                    Width =2286
+                    ColumnWidth =1740
+                    TabIndex =5
+                    Name ="TxtDecDeclarantPrenom"
+                    ControlSource ="DecDeclarantPrenom"
+                    StatusBarText ="Declarant Prenom"
+                    FontName ="Tahoma"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =10200
+                            Top =1140
+                            Width =2265
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDeclarationPrenom"
+                            Caption ="Prénom du déclarant:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =2280
+                    Top =1515
+                    Width =2811
+                    ColumnWidth =1755
+                    TabIndex =6
+                    Name ="TxtDecDeclarantQualite"
+                    ControlSource ="DecDeclarantQualite"
+                    StatusBarText ="Declarant Qualite"
+                    FontName ="Tahoma"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =135
+                            Top =1530
+                            Width =2130
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDeclarantQualite"
+                            Caption ="Qualite du déclarant:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =7680
+                    Top =1530
+                    ColumnWidth =2115
+                    TabIndex =7
+                    Name ="TxtDecDeclarantTelephone1"
+                    ControlSource ="DecDeclarantTelephone1"
+                    StatusBarText ="Declarant Telephone1"
+                    FontName ="Tahoma"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =5400
+                            Top =1530
+                            Width =2265
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDeclarantTelephone1"
+                            Caption ="Téléphone 1:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =12480
+                    Top =1530
+                    ColumnWidth =2115
+                    TabIndex =8
+                    Name ="TxtDecDeclarantTelephone2"
+                    ControlSource ="DecDeclarantTelephone2"
+                    StatusBarText ="Declarant Telephone2"
+                    FontName ="Tahoma"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =10200
+                            Top =1530
+                            Width =2265
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDeclarantTelephone2"
+                            Caption ="Téléphone 2:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =95
+                    IMESentenceMode =3
+                    Left =2280
+                    Top =1920
+                    Width =4536
+                    ColumnWidth =2115
+                    TabIndex =9
+                    Name ="TxtDecDeclarantMail"
+                    ControlSource ="DecDeclarantMail"
+                    StatusBarText ="Declarant Mail"
+                    FontName ="Tahoma"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =135
+                            Top =1920
+                            Width =2130
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecDeclarantMail"
+                            Caption ="Mail du déclarant:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin Rectangle
+                    OverlapFlags =255
+                    Left =75
+                    Top =120
+                    Width =15135
+                    Height =450
+                    Name ="BteDeclaration"
+                End
+                Begin Rectangle
+                    OverlapFlags =255
+                    Left =75
+                    Top =1035
+                    Width =15135
+                    Height =1290
+                    Name ="BteDeclarant"
+                End
+                Begin Tab
+                    OverlapFlags =85
+                    Left =30
+                    Top =2430
+                    Width =15240
+                    Height =6255
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =10
+                    Name ="OgtDeclaration"
+                    FontName ="Tahoma"
+                    OnChange ="[Event Procedure]"
+                    Begin
+                        Begin Page
+                            OverlapFlags =215
+                            Left =165
+                            Top =2880
+                            Width =14970
+                            Height =5670
+                            Name ="PgeIdentiteVictime"
+                            PictureData = Begin
+                                0x28000000110000000f0000000100040000000000b40000000000000000000000 ,
+                                0x1000000000000000000000000000800000800000008080008000000080008000 ,
+                                0x8080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                                0xffff0000ffffff00888888888888888888888888888888888888888880000000 ,
+                                0x8888800888888888800000008888800088888888840000008888800008888888 ,
+                                0x8004322688888000008888888040e26288888000000888888440366688888000 ,
+                                0x000088888111a3338888800000088888899deaee8888800000888888888caaaa ,
+                                0x8888800008888888811133228888800088888888811909108888800888888888 ,
+                                0x8ff865f088888888888888888f8765f088888888888888888f0865f000000000
+                            End
+                            Caption ="Identité de la victime"
+                            Begin
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =2280
+                                    Top =3405
+                                    Width =2256
+                                    Name ="TxtDecVictimeNom"
+                                    ControlSource ="DecVictimeNom"
+                                    StatusBarText ="Victime Nom"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =210
+                                            Top =3405
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeNom"
+                                            Caption ="Nom de la victime:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =7671
+                                    Top =3405
+                                    Width =2271
+                                    TabIndex =1
+                                    Name ="TxtDecVictimePrenom"
+                                    ControlSource ="DecVictimePrenom"
+                                    StatusBarText ="Victime Prenom"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =5400
+                                            Top =3405
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimePrenom"
+                                            Caption ="Prénom de la victime:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =2280
+                                    Top =3975
+                                    Width =1146
+                                    TabIndex =2
+                                    Name ="TxtDecVictimeNaissanceDate"
+                                    ControlSource ="DecVictimeNaissanceDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Victime Date De Naissance"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =195
+                                            Top =3975
+                                            Width =2085
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeNaissanceDate"
+                                            Caption ="Date de naissance:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =7665
+                                    Top =3975
+                                    Width =2286
+                                    TabIndex =3
+                                    Name ="TxtDecVictimeNaissanceLieu"
+                                    ControlSource ="DecVictimeNaissanceLieu"
+                                    StatusBarText ="Victime Lieu De Naissance"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =5400
+                                            Top =3975
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeNaissanceLieu"
+                                            Caption ="Lieu de naissance:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =2286
+                                    Top =4530
+                                    Width =2826
+                                    Height =555
+                                    TabIndex =4
+                                    Name ="TxtDecVictimeAdresse"
+                                    ControlSource ="DecVictimeAdresse"
+                                    StatusBarText ="Victime Adresse"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =215
+                                            Left =195
+                                            Top =4530
+                                            Width =1500
+                                            Height =570
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeAdresse"
+                                            Caption ="Adresse de la victime:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =7380
+                                    Top =4530
+                                    Width =1146
+                                    TabIndex =5
+                                    Name ="TxtDecVictimeCodePostal"
+                                    ControlSource ="DecVictimeCodePostal"
+                                    StatusBarText ="Victime Code Postal"
+                                    FontName ="Tahoma"
+                                    InputMask ="00000;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =5400
+                                            Top =4530
+                                            Width =1980
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeCodePostal"
+                                            Caption ="Code Postal:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =9660
+                                    Top =4530
+                                    Width =2271
+                                    TabIndex =6
+                                    Name ="TxtDecVictimeVille"
+                                    ControlSource ="DecVictimeVille"
+                                    StatusBarText ="Victime Ville"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =8805
+                                            Top =4530
+                                            Width =855
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeVille"
+                                            Caption ="Ville:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =13056
+                                    Top =4530
+                                    TabIndex =7
+                                    Name ="TxtDecVictimePays"
+                                    ControlSource ="DecVictimePays"
+                                    StatusBarText ="Victime Pays"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =12210
+                                            Top =4530
+                                            Width =840
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimePays"
+                                            Caption ="Pays:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =2286
+                                    Top =5385
+                                    Width =1716
+                                    ColumnWidth =1950
+                                    TabIndex =8
+                                    Name ="TxtDecVictimeTelephone1"
+                                    ControlSource ="DecVictimeTelephone1"
+                                    StatusBarText ="Victime Telephone1"
+                                    FontName ="Tahoma"
+                                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =195
+                                            Top =5385
+                                            Width =2085
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeTelephone1"
+                                            Caption ="Téléphone 1:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =7671
+                                    Top =5385
+                                    ColumnWidth =1950
+                                    TabIndex =9
+                                    Name ="TxtDecVictimeTelephone2"
+                                    ControlSource ="DecVictimeTelephone2"
+                                    StatusBarText ="Victime Telephone2"
+                                    FontName ="Tahoma"
+                                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =5400
+                                            Top =5385
+                                            Width =2265
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeTelephone2"
+                                            Caption ="Téléphone 2:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =2286
+                                    Top =5955
+                                    Width =2826
+                                    ColumnWidth =2775
+                                    TabIndex =10
+                                    Name ="TxtDecVictimeRIB"
+                                    ControlSource ="DecVictimeRIB"
+                                    StatusBarText ="Victime RIB"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =210
+                                            Top =5955
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeRIB"
+                                            Caption ="RIB de la victime:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =7671
+                                    Top =5955
+                                    Width =2271
+                                    ColumnWidth =2055
+                                    TabIndex =11
+                                    Name ="CmbDecVictimeTypCptNumero"
+                                    ControlSource ="DecVictimeTypCptNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLTYPECOMPTE.TypCptNumero, TBLTYPECOMPTE.TypCptNom FROM TBLTYPECOMPTE; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Victime Type Compte"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =5400
+                                            Top =5955
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeTypCptNumero"
+                                            Caption ="Type de compte:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =12486
+                                    Top =5955
+                                    Width =2271
+                                    ColumnWidth =1845
+                                    TabIndex =12
+                                    Name ="TxtDecVictimeAgence"
+                                    ControlSource ="DecVictimeAgence"
+                                    StatusBarText ="Victime Agence"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =10200
+                                            Top =5955
+                                            Width =2280
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeAgence"
+                                            Caption ="Nom de l'agence:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =2286
+                                    Top =6525
+                                    Width =2826
+                                    Height =555
+                                    TabIndex =13
+                                    Name ="TxtDecVictimeAgenceAdresse"
+                                    ControlSource ="DecVictimeAgenceAdresse"
+                                    StatusBarText ="Victime Agence Adresse"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =195
+                                            Top =6525
+                                            Width =2085
+                                            Height =555
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeAgenceAdresse"
+                                            Caption ="Adresse de l'agence:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =7386
+                                    Top =6525
+                                    Width =1131
+                                    TabIndex =14
+                                    Name ="TxtDecVictimeAgenceCodePostal"
+                                    ControlSource ="DecVictimeAgenceCodePostal"
+                                    StatusBarText ="Victime Agence Code Postal"
+                                    FontName ="Tahoma"
+                                    InputMask ="00000;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =5400
+                                            Top =6525
+                                            Width =1980
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeAgenceCodePostal"
+                                            Caption ="Code Postal:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =9666
+                                    Top =6525
+                                    Width =2256
+                                    TabIndex =15
+                                    Name ="TxtDecVictimeAgenceVille"
+                                    ControlSource ="DecVictimeAgenceVille"
+                                    StatusBarText ="Victime Agence Ville"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =8805
+                                            Top =6525
+                                            Width =855
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeAgenceVille"
+                                            Caption ="Ville:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    Left =13056
+                                    Top =6525
+                                    TabIndex =16
+                                    Name ="TxtDecVictimeAgencePays"
+                                    ControlSource ="DecVictimeAgencePays"
+                                    StatusBarText ="Victime Agence Pays"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =12210
+                                            Top =6525
+                                            Width =840
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeAgencePays"
+                                            Caption ="Pays:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =215
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2280
+                                    Top =7410
+                                    Width =2046
+                                    TabIndex =17
+                                    BoundColumn =1
+                                    Name ="CmbDecVictimeMarNumero"
+                                    ControlSource ="DecVictimeMarNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLMARCHE.MarNom, TBLMARCHE.MarNumero FROM TBLMARCHE ORDER BY TBLMARCHE.M"
+                                        "arNom; "
+                                    ColumnWidths ="2268;0"
+                                    StatusBarText ="Victime Marche"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =223
+                                            Left =195
+                                            Top =7410
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecVictimeMarNumero"
+                                            Caption ="Marché:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                            End
+                        End
+                        Begin Page
+                            OverlapFlags =247
+                            Left =165
+                            Top =2880
+                            Width =14970
+                            Height =5670
+                            Name ="PgeIdentiteBeneficiaire"
+                            Caption ="Identité du bénéficiaire"
+                            Begin
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2280
+                                    Top =3120
+                                    Width =1716
+                                    Name ="CmbDecBeneficiaireTypBenNumero"
+                                    ControlSource ="DecBeneficiaireTypBenNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLTYPEBENEFICIAIRE.TypBenNumero, TBLTYPEBENEFICIAIRE.TypBenNom FROM TBLT"
+                                        "YPEBENEFICIAIRE ORDER BY TBLTYPEBENEFICIAIRE.TypBenNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Beneficiaire Type"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =195
+                                            Top =3120
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireTypBenNumero"
+                                            Caption ="Type de bénéficiaire:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7671
+                                    Top =3120
+                                    Width =2256
+                                    TabIndex =1
+                                    Name ="TxtDecBeneficiaireNom"
+                                    ControlSource ="DecBeneficiaireNom"
+                                    StatusBarText ="Beneficiare Nom"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =3120
+                                            Width =2280
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireNom"
+                                            Caption ="Nom du bénéficiare:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =12486
+                                    Top =3120
+                                    Width =2256
+                                    TabIndex =2
+                                    Name ="TxtDecBeneficiairePrenom"
+                                    ControlSource ="DecBeneficiairePrenom"
+                                    StatusBarText ="Beneficiare Prenom"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =10200
+                                            Top =3120
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiairePrenom"
+                                            Caption ="Prénom du bénéficiaire:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2286
+                                    Top =3555
+                                    Width =1131
+                                    TabIndex =3
+                                    Name ="TxtDecBeneficiaireNaissanceDate"
+                                    ControlSource ="DecBeneficiaireNaissanceDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Beneficiare Date De Naissance"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =210
+                                            Top =3555
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireNaissanceDate"
+                                            Caption ="Date de naissance:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7665
+                                    Top =3555
+                                    Width =2286
+                                    TabIndex =4
+                                    Name ="TxtDecBeneficiaireNaissanceLieu"
+                                    ControlSource ="DecBeneficiaireNaissanceLieu"
+                                    StatusBarText ="Beneficiare Lieu De Naissance"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5400
+                                            Top =3555
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiareNaissanceLieu"
+                                            Caption ="Lieu de naissance:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =3975
+                                    Width =2826
+                                    Height =570
+                                    TabIndex =5
+                                    Name ="TxtDecBeneficiaireAdresse"
+                                    ControlSource ="DecBeneficiaireAdresse"
+                                    StatusBarText ="Beneficiare Adresse"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =247
+                                            Left =195
+                                            Top =3975
+                                            Width =1500
+                                            Height =570
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAdresse"
+                                            Caption ="Adresse du bénéficiaire:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7365
+                                    Top =3975
+                                    Width =1131
+                                    TabIndex =6
+                                    Name ="TxtDecBeneficiaireCodePostal"
+                                    ControlSource ="DecBeneficiaireCodePostal"
+                                    StatusBarText ="Beneficiare Code Postal"
+                                    FontName ="Tahoma"
+                                    InputMask ="00000;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =3975
+                                            Width =1980
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireCodePostal"
+                                            Caption ="Code Postal:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =9645
+                                    Top =3975
+                                    Width =2271
+                                    TabIndex =7
+                                    Name ="TxtDecBeneficiaireVille"
+                                    ControlSource ="DecBeneficiaireVille"
+                                    StatusBarText ="Beneficiare Ville"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =8790
+                                            Top =3975
+                                            Width =855
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireVille"
+                                            Caption ="Ville:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =13056
+                                    Top =3975
+                                    TabIndex =8
+                                    Name ="TxtDecBeneficiairePays"
+                                    ControlSource ="DecBeneficiairePays"
+                                    StatusBarText ="Beneficiare Pays"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =12195
+                                            Top =3975
+                                            Width =840
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiairePays"
+                                            Caption ="Pays:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =4680
+                                    ColumnWidth =2295
+                                    TabIndex =9
+                                    Name ="TxtDecBeneficiaireTelephone1"
+                                    ControlSource ="DecBeneficiaireTelephone1"
+                                    StatusBarText ="Beneficiaire Telephone1"
+                                    FontName ="Tahoma"
+                                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =195
+                                            Top =4680
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireTelephone1"
+                                            Caption ="Téléphone 1:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7650
+                                    Top =4680
+                                    ColumnWidth =2295
+                                    TabIndex =10
+                                    Name ="TxtDecBeneficiaireTelephone2"
+                                    ControlSource ="DecBeneficiaireTelephone2"
+                                    StatusBarText ="Beneficiaire Telephone2"
+                                    FontName ="Tahoma"
+                                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =4680
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireTelephone2"
+                                            Caption ="Téléphone 2:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2280
+                                    Top =5100
+                                    Width =2826
+                                    TabIndex =11
+                                    Name ="TxtDecBeneficiaireRIB"
+                                    ControlSource ="DecBeneficiaireRIB"
+                                    StatusBarText ="Beneficiaire RIB"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =210
+                                            Top =5100
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireRIB"
+                                            Caption ="RIB du bénéficiaire:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7650
+                                    Top =5100
+                                    Width =2286
+                                    TabIndex =23
+                                    Name ="TxtDecBeneficiaireBanque"
+                                    ControlSource ="DecBeneficiaireBanque"
+                                    StatusBarText ="Beneficiaire Banque"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =5100
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireBanque"
+                                            Caption ="Banque du bénéficiaire:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =12471
+                                    Top =5100
+                                    Width =2271
+                                    ColumnWidth =1905
+                                    TabIndex =12
+                                    Name ="TxtDecBeneficiaireAgence"
+                                    ControlSource ="DecBeneficiaireAgence"
+                                    StatusBarText ="Beneficiaire Agence"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =10200
+                                            Top =5100
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgence"
+                                            Caption ="Nom de l'agence:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =5670
+                                    Width =2826
+                                    Height =570
+                                    ColumnWidth =2685
+                                    TabIndex =13
+                                    Name ="TxtDecBeneficiaireAgenceAdresse"
+                                    ControlSource ="DecBeneficiaireAgenceAdresse"
+                                    StatusBarText ="Beneficiaire Agence Adresse"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =247
+                                            Left =195
+                                            Top =5670
+                                            Width =1500
+                                            Height =570
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceAdresse"
+                                            Caption ="Adresse de l'agence:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7365
+                                    Top =5670
+                                    Width =1146
+                                    ColumnWidth =3030
+                                    TabIndex =14
+                                    Name ="TxtDecBeneficiaireAgenceCodePostal"
+                                    ControlSource ="DecBeneficiaireAgenceCodePostal"
+                                    StatusBarText ="Beneficiaire Agence Code Postal"
+                                    FontName ="Tahoma"
+                                    InputMask ="00000;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =5670
+                                            Width =1980
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceCodePostal"
+                                            Caption ="Code Postal:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =9645
+                                    Top =5670
+                                    Width =2271
+                                    ColumnWidth =2340
+                                    TabIndex =15
+                                    Name ="TxtDecBeneficiaireAgenceVille"
+                                    ControlSource ="DecBeneficiaireAgenceVille"
+                                    StatusBarText ="Beneficiaire Agence Ville"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =8790
+                                            Top =5670
+                                            Width =855
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceVille"
+                                            Caption ="Ville:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =13041
+                                    Top =5670
+                                    ColumnWidth =2415
+                                    TabIndex =16
+                                    Name ="TxtDecBeneficiaireAgencePays"
+                                    ControlSource ="DecBeneficiaireAgencePays"
+                                    StatusBarText ="Beneficiaire Agence Pays"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =12195
+                                            Top =5670
+                                            Width =840
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgencePays"
+                                            Caption ="Pays:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin OptionGroup
+                                    OverlapFlags =255
+                                    Left =2265
+                                    Top =6390
+                                    Width =2841
+                                    Height =285
+                                    TabIndex =17
+                                    Name ="CadDecBeneficiaireAgenceAppel"
+                                    ControlSource ="DecBeneficiaireAgenceAppel"
+                                    Begin
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =2460
+                                            Top =6450
+                                            Width =185
+                                            Height =180
+                                            Name ="ChkDecBeneficiaireAgenceAppelOui"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =2835
+                                                    Top =6390
+                                                    Width =570
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecBeneficiaireAgenceAppelOui"
+                                                    Caption ="Oui"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =4170
+                                            Top =6450
+                                            Width =215
+                                            Height =195
+                                            OptionValue =0
+                                            Name ="ChkDecBeneficiaireAgenceAppelNon"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =4530
+                                                    Top =6390
+                                                    Width =570
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecBeneficiaireAgenceAppelNon"
+                                                    Caption ="Non"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7656
+                                    Top =6375
+                                    Width =2271
+                                    ColumnWidth =3720
+                                    TabIndex =18
+                                    Name ="TxtDecBeneficiaireAgenceResponsableNom"
+                                    ControlSource ="DecBeneficiaireAgenceResponsableNom"
+                                    StatusBarText ="Beneficiaire Agence Contact Nom"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =6375
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceResponsableNom"
+                                            Caption ="Contact Nom:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =12465
+                                    Top =6375
+                                    Width =2286
+                                    ColumnWidth =3825
+                                    TabIndex =19
+                                    Name ="TxtDecBeneficiaireAgenceResponsablePrenom"
+                                    ControlSource ="DecBeneficiaireAgenceResponsablePrenom"
+                                    StatusBarText ="Beneficiaire Agence Contact Prenom"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =10200
+                                            Top =6375
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceResponsablePrenom"
+                                            Caption ="Contact Prénom:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =6810
+                                    ColumnWidth =4140
+                                    TabIndex =20
+                                    Name ="TxtDecBeneficiaireAgenceResponsableTelephone1"
+                                    ControlSource ="DecBeneficiaireAgenceResponsableTelephone1"
+                                    StatusBarText ="Beneficiaire Agence Contact Telephone1"
+                                    FontName ="Tahoma"
+                                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =180
+                                            Top =6810
+                                            Width =2085
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceResponsableTelephone1"
+                                            Caption ="Contact Téléphone 1:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7650
+                                    Top =6810
+                                    ColumnWidth =4140
+                                    TabIndex =21
+                                    Name ="TxtDecBeneficiaireAgenceResponsableTelephone2"
+                                    ControlSource ="DecBeneficiaireAgenceResponsableTelephone2"
+                                    StatusBarText ="Beneficiaire Agence Contact Telephone2"
+                                    FontName ="Tahoma"
+                                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =6810
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireAgenceResponsableTelephone2"
+                                            Caption ="Contact Téléphone 2:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin Label
+                                    OverlapFlags =247
+                                    Left =180
+                                    Top =6390
+                                    Width =2085
+                                    Height =285
+                                    FontSize =10
+                                    FontWeight =700
+                                    Name ="EtiDecBeneficiaireAgenceAppel"
+                                    Caption ="Agence contactée:"
+                                    FontName ="Tahoma"
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    ScrollBars =2
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2265
+                                    Top =7230
+                                    Width =12486
+                                    Height =990
+                                    TabIndex =22
+                                    Name ="TxtDecBeneficiaireCommentaire"
+                                    ControlSource ="DecBeneficiaireCommentaire"
+                                    StatusBarText ="Beneficiaire Commentaire"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =180
+                                            Top =7230
+                                            Width =2085
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecBeneficiaireCommentaire"
+                                            Caption ="Commentaires:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                            End
+                        End
+                        Begin Page
+                            OverlapFlags =247
+                            Left =165
+                            Top =2880
+                            Width =14970
+                            Height =5670
+                            Name ="PgeQualificationFraude"
+                            Caption ="Qualification de la fraude"
+                            Begin
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =3405
+                                    Width =1131
+                                    Name ="TxtDecFraudeDate"
+                                    ControlSource ="DecFraudeDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Fraude Date"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =195
+                                            Top =3405
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeDate"
+                                            Caption ="Date de l'opération:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7650
+                                    Top =3405
+                                    Width =1131
+                                    TabIndex =1
+                                    Name ="TxtDecFraudeHeure"
+                                    ControlSource ="DecFraudeHeure"
+                                    Format ="Long Time"
+                                    StatusBarText ="Fraude Heure"
+                                    FontName ="Tahoma"
+                                    InputMask ="00:00;0;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =3405
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeHeure"
+                                            Caption ="Heure de l'opération:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =12480
+                                    Top =3405
+                                    Width =2271
+                                    ColumnWidth =1410
+                                    TabIndex =2
+                                    Name ="CmbDecFraudeTypOpeNumero"
+                                    ControlSource ="DecFraudeTypOpeNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLTYPEOPERATION.TypOpeNumero, TBLTYPEOPERATION.TypOpeNom FROM TBLTYPEOPE"
+                                        "RATION ORDER BY TBLTYPEOPERATION.TypOpeNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Fraude Type Operation"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =10500
+                                            Top =3405
+                                            Width =1980
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeTypOpeNumero"
+                                            Caption ="Type d'opération:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =3975
+                                    TabIndex =3
+                                    Name ="TxtDecFraudeMontant"
+                                    ControlSource ="DecFraudeMontant"
+                                    Format ="#,##0.00 €;-#,##0.00 €"
+                                    StatusBarText ="Fraude Montant"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =195
+                                            Top =3975
+                                            Width =2070
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeMontant"
+                                            Caption ="Montant:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7656
+                                    Top =3975
+                                    TabIndex =4
+                                    Name ="TxtDecFraudeMontantRecuperer"
+                                    ControlSource ="DecFraudeMontantRecuperer"
+                                    Format ="#,##0.00 €;-#,##0.00 €"
+                                    StatusBarText ="Fraude Montant Recuperer"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =3975
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeMontantRecuperer"
+                                            Caption ="Montant récuperé:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2265
+                                    Top =4530
+                                    Width =5106
+                                    TabIndex =5
+                                    Name ="TxtDecFraudeLibelle"
+                                    ControlSource ="DecFraudeLibelle"
+                                    StatusBarText ="Fraude Libelle Operation"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =210
+                                            Top =4530
+                                            Width =2055
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeLibelle"
+                                            Caption ="Libelle opération:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =10770
+                                    Top =4530
+                                    Width =3966
+                                    TabIndex =6
+                                    Name ="CmbDecFraudeTypFrdNumero"
+                                    ControlSource ="DecFraudeTypFrdNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLTYPEFRAUDE.TypFrdNumero, TBLTYPEFRAUDE.TypFrdNom FROM TBLTYPEFRAUDE OR"
+                                        "DER BY TBLTYPEFRAUDE.TypFrdNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Fraude Mode Operatoire"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =8790
+                                            Top =4530
+                                            Width =1980
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeTypFrdNumero"
+                                            Caption ="Type de fraude:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2271
+                                    Top =5100
+                                    Width =2841
+                                    ColumnWidth =1185
+                                    TabIndex =7
+                                    Name ="CmbDecFraudeSouIPNumero"
+                                    ControlSource ="DecFraudeSouIPNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLSOURCEIP.SouIPNumero, TBLSOURCEIP.SouIPNom FROM TBLSOURCEIP ORDER BY T"
+                                        "BLSOURCEIP.SouIPNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Fraude Source IP"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =210
+                                            Top =5100
+                                            Width =2055
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeSouIPNumero"
+                                            Caption ="Source IP:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7650
+                                    Top =5100
+                                    ColumnWidth =2235
+                                    TabIndex =8
+                                    Name ="TxtDecFraudeAdresseIP"
+                                    ControlSource ="DecFraudeAdresseIP"
+                                    StatusBarText ="Fraude Adresse IP"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5385
+                                            Top =5100
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeAdresseIP"
+                                            Caption ="Adresse IP:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2271
+                                    Top =5670
+                                    Width =1131
+                                    TabIndex =9
+                                    Name ="TxtDecFraudeDecaissementDate"
+                                    ControlSource ="DecFraudeDecaissementDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Fraude Decaissement Date"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =210
+                                            Top =5670
+                                            Width =2055
+                                            Height =570
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeDecaissementDate"
+                                            Caption ="Date de décaissement :"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7665
+                                    Top =5670
+                                    Width =1116
+                                    TabIndex =10
+                                    Name ="TxtDecFraudeDecaissementHeure"
+                                    ControlSource ="DecFraudeDecaissementHeure"
+                                    Format ="Long Time"
+                                    StatusBarText ="Fraude Decaissement Heure"
+                                    FontName ="Tahoma"
+                                    InputMask ="00:00;0;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5955
+                                            Top =5670
+                                            Width =1710
+                                            Height =570
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeDecaissementHeure"
+                                            Caption ="Heure de décaissement:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =13041
+                                    Top =5670
+                                    TabIndex =11
+                                    Name ="TxtDecFraudeDecaissementMontant"
+                                    ControlSource ="DecFraudeDecaissementMontant"
+                                    Format ="#,##0.00 €;-#,##0.00 €"
+                                    StatusBarText ="Fraude Decaissement Montant"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =11340
+                                            Top =5670
+                                            Width =1710
+                                            Height =570
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecFraudeDecaissementMontant"
+                                            Caption ="Montant du décaissement:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    ScrollBars =2
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2265
+                                    Top =6810
+                                    Width =12486
+                                    Height =1080
+                                    TabIndex =12
+                                    Name ="TxtDecFraudeCommentaire"
+                                    ControlSource ="DecFraudeCommentaire"
+                                    StatusBarText ="Fraude Commentaire"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =210
+                                            Top =6810
+                                            Width =2055
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="Étiquette192"
+                                            Caption ="Commentaires:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                            End
+                        End
+                        Begin Page
+                            OverlapFlags =247
+                            Left =165
+                            Top =2880
+                            Width =14970
+                            Height =5670
+                            Name ="PgeDepotPlainte"
+                            Caption ="Dépôt de plainte"
+                            Begin
+                                Begin OptionGroup
+                                    OverlapFlags =255
+                                    Left =10770
+                                    Top =6480
+                                    Width =3980
+                                    Height =285
+                                    Name ="CadDecDepotPlainteEntiteAccepter"
+                                    ControlSource ="DecDepotPlainteEntiteAccepter"
+                                    DefaultValue ="=True"
+                                    Begin
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =10980
+                                            Top =6525
+                                            Width =155
+                                            Height =180
+                                            Name ="ChkDecDepotPlainteEntiteAccepterOui"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =11345
+                                                    Top =6480
+                                                    Width =1125
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteEntiteAccepterOui"
+                                                    Caption ="Accepté"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =13215
+                                            Top =6525
+                                            Width =170
+                                            Height =195
+                                            OptionValue =0
+                                            Name ="ChkDecDepotPlainteEntiteAccepterNon"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =13610
+                                                    Top =6480
+                                                    Width =1140
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteEntiteAccepterNon"
+                                                    Caption ="Refusé"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                        Begin Label
+                                            BackStyle =1
+                                            OverlapFlags =255
+                                            Left =9645
+                                            Top =6480
+                                            Width =1125
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            BackColor =16628127
+                                            Name ="EtiDecDepotPlainteEntiteAccepter"
+                                            Caption ="Statut:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin OptionGroup
+                                    OverlapFlags =255
+                                    Left =10770
+                                    Top =3975
+                                    Width =3975
+                                    Height =285
+                                    TabIndex =1
+                                    Name ="CadDecDepotPlainteClientAccepter"
+                                    ControlSource ="DecDepotPlainteClientAccepter"
+                                    DefaultValue ="=True"
+                                    Begin
+                                        Begin Label
+                                            BackStyle =1
+                                            OverlapFlags =255
+                                            Left =9645
+                                            Top =3975
+                                            Width =1125
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            BackColor =16628127
+                                            Name ="EtiDecDepotPlainteClientAccepter"
+                                            Caption ="Statut:"
+                                            FontName ="Tahoma"
+                                        End
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =10965
+                                            Top =4035
+                                            Width =185
+                                            Height =180
+                                            Name ="ChkDecDepotPlainteClientAccepterOui"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =11330
+                                                    Top =3975
+                                                    Width =1140
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteClientAccepterOui"
+                                                    Caption ="Accepté"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =13245
+                                            Top =4035
+                                            Width =185
+                                            Height =165
+                                            OptionValue =0
+                                            Name ="ChkDecDepotPlainteClientAccepterNon"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =13605
+                                                    Top =3975
+                                                    Width =1140
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteClientAccepterNon"
+                                                    Caption ="Refusé"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                    End
+                                End
+                                Begin Label
+                                    OverlapFlags =255
+                                    Left =570
+                                    Top =3405
+                                    Width =2835
+                                    Height =255
+                                    FontSize =10
+                                    FontWeight =700
+                                    Name ="EtiDepotPlainteClient"
+                                    Caption ="Dépôt de plainte client:"
+                                    FontName ="Tahoma"
+                                End
+                                Begin Rectangle
+                                    OverlapFlags =255
+                                    Left =285
+                                    Top =3405
+                                    Width =14745
+                                    Height =2415
+                                    Name ="BteDepotPlainteClient"
+                                End
+                                Begin OptionGroup
+                                    OverlapFlags =255
+                                    Left =2835
+                                    Top =3975
+                                    Width =2841
+                                    Height =285
+                                    TabIndex =2
+                                    Name ="CadDecDepotPlainteClient"
+                                    ControlSource ="DecDepotPlainteClient"
+                                    DefaultValue ="=True"
+                                    Begin
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =3060
+                                            Top =4035
+                                            Width =185
+                                            Height =180
+                                            Name ="ChkDecDepotPlainteClientOui"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =3405
+                                                    Top =3975
+                                                    Width =570
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteClientOui"
+                                                    Caption ="Oui"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =4725
+                                            Top =4035
+                                            Width =170
+                                            Height =195
+                                            OptionValue =0
+                                            Name ="ChkDecDepotPlainteClientNon"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =5100
+                                                    Top =3975
+                                                    Width =570
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteClientNon"
+                                                    Caption ="Non"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7941
+                                    Top =3975
+                                    Width =1131
+                                    TabIndex =3
+                                    Name ="TxtDecDepotPlainteClientDate"
+                                    ControlSource ="DecDepotPlainteClientDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Fraude Depot Plainte Client Date"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =6240
+                                            Top =3975
+                                            Width =1695
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteClientDate"
+                                            Caption ="Date de dépôt:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin Label
+                                    OverlapFlags =255
+                                    Left =570
+                                    Top =5955
+                                    Width =2835
+                                    Height =255
+                                    FontSize =10
+                                    FontWeight =700
+                                    Name ="EtiDepotPlainteEntite"
+                                    Caption ="Dépôt de plainte entité:"
+                                    FontName ="Tahoma"
+                                End
+                                Begin Rectangle
+                                    OverlapFlags =255
+                                    Left =285
+                                    Top =5955
+                                    Width =14745
+                                    Height =2400
+                                    Name ="BteDepotPlainteEntite"
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2835
+                                    Top =4530
+                                    Width =2796
+                                    TabIndex =4
+                                    Name ="CmbDecDepotPlainteClientAutNumero"
+                                    ControlSource ="DecDepotPlainteClientAutNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLAUTORITE.AutNumero, TBLAUTORITE.AutNom FROM TBLAUTORITE ORDER BY TBLAU"
+                                        "TORITE.AutNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Fraude Depot Plainte Client Autorite"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =4530
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteClientAutNumero"
+                                            Caption ="Autorité de dépôt:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7935
+                                    Top =4530
+                                    Width =6816
+                                    TabIndex =5
+                                    Name ="TxtDecDepotPlainteClientLieu"
+                                    ControlSource ="DecDepotPlainteClientLieu"
+                                    StatusBarText ="Fraude Depot Plainte Client Lieu"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =6240
+                                            Top =4530
+                                            Width =1695
+                                            Height =255
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteClientLieu"
+                                            Caption ="Lieu de dépôt:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2831
+                                    Top =5105
+                                    Width =11916
+                                    Height =570
+                                    TabIndex =6
+                                    Name ="TxtDecDepotPlainteClientMotif"
+                                    ControlSource ="DecDepotPlainteClientMotif"
+                                    StatusBarText ="Fraude Depot Plainte Client Motif"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =5100
+                                            Width =2265
+                                            Height =255
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteClientMotif"
+                                            Caption ="Motif du refus:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin OptionGroup
+                                    OverlapFlags =255
+                                    Left =2835
+                                    Top =6480
+                                    Width =2841
+                                    Height =300
+                                    TabIndex =7
+                                    Name ="CadDecDepotPlainteEntite"
+                                    ControlSource ="DecDepotPlainteEntite"
+                                    DefaultValue ="=True"
+                                    Begin
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =3030
+                                            Top =6555
+                                            Width =200
+                                            Height =180
+                                            Name ="ChkDecDepotPlainteEntiteOui"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =3405
+                                                    Top =6495
+                                                    Width =570
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteEntiteOui"
+                                                    Caption ="Oui"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                        Begin CheckBox
+                                            OverlapFlags =247
+                                            Left =4725
+                                            Top =6555
+                                            Width =200
+                                            Height =180
+                                            OptionValue =0
+                                            Name ="ChkDecDepotPlainteEntiteNon"
+                                            Begin
+                                                Begin Label
+                                                    OverlapFlags =247
+                                                    Left =5100
+                                                    Top =6495
+                                                    Width =570
+                                                    Height =285
+                                                    FontSize =10
+                                                    FontWeight =700
+                                                    Name ="EtiDecDepotPlainteEntiteNon"
+                                                    Caption ="Non"
+                                                    FontName ="Tahoma"
+                                                End
+                                            End
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7935
+                                    Top =6525
+                                    Width =1146
+                                    TabIndex =8
+                                    Name ="TxtDecDepotPlainteEntiteDate"
+                                    ControlSource ="DecDepotPlainteEntiteDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Fraude Depot Plainte Entite Date"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =6240
+                                            Top =6525
+                                            Width =1695
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteEntiteDate"
+                                            Caption ="Date de dépôt:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin Label
+                                    OverlapFlags =247
+                                    Left =570
+                                    Top =3975
+                                    Width =2265
+                                    Height =255
+                                    FontSize =10
+                                    FontWeight =700
+                                    Name ="EtiDecDepotPlainteClient"
+                                    Caption ="Dépôt:"
+                                    FontName ="Tahoma"
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2835
+                                    Top =7080
+                                    Width =2826
+                                    TabIndex =9
+                                    Name ="CmbDecDepotPlainteEntiteAutNumero"
+                                    ControlSource ="DecDepotPlainteEntiteAutNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLAUTORITE.AutNumero, TBLAUTORITE.AutNom FROM TBLAUTORITE ORDER BY TBLAU"
+                                        "TORITE.AutNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Fraude Depot Plainte Entite Autorite"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =7080
+                                            Width =2265
+                                            Height =285
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteEntiteAutNumero"
+                                            Caption ="Autorité de dépôt:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7935
+                                    Top =7080
+                                    Width =6816
+                                    TabIndex =10
+                                    Name ="TxtDecDepotPlainteEntiteLieu"
+                                    ControlSource ="DecDepotPlainteEntiteLieu"
+                                    StatusBarText ="Fraude Depot Plainte Entite Lieu"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =6240
+                                            Top =7080
+                                            Width =1695
+                                            Height =255
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteEntiteLieu"
+                                            Caption ="Lieu de dépôt:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin Label
+                                    OverlapFlags =247
+                                    Left =570
+                                    Top =6510
+                                    Width =2265
+                                    Height =255
+                                    FontSize =10
+                                    FontWeight =700
+                                    Name ="EtiDecDepotPlainteEntite"
+                                    Caption ="Dépôt:"
+                                    FontName ="Tahoma"
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2831
+                                    Top =7655
+                                    Width =11916
+                                    Height =570
+                                    TabIndex =11
+                                    Name ="TxtDecDepotPlainteEntiteMotif"
+                                    ControlSource ="DecDepotPlainteEntiteMotif"
+                                    StatusBarText ="Fraude Depot Plainte Entite Motif"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =7650
+                                            Width =2250
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecDepotPlainteEntiteMotif"
+                                            Caption ="Motif du refus:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                            End
+                        End
+                        Begin Page
+                            OverlapFlags =247
+                            Left =165
+                            Top =2880
+                            Width =14970
+                            Height =5670
+                            Name ="PgeSiteIllicite"
+                            Caption ="Information site illicite"
+                            Begin
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2834
+                                    Top =3401
+                                    Name ="TxtDecSiteIlliciteDate"
+                                    ControlSource ="DecSiteIlliciteDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Site Illicite Date"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =3405
+                                            Width =2265
+                                            Height =255
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteDate"
+                                            Caption ="Date de détection:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =7950
+                                    Top =3405
+                                    TabIndex =1
+                                    Name ="CmbDecSiteIlliciteStaSitNumero"
+                                    ControlSource ="DecSiteIlliciteStaSitNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLSTATUTSITE.StaSitNumero, TBLSTATUTSITE.StaSitNom FROM TBLSTATUTSITE OR"
+                                        "DER BY TBLSTATUTSITE.StaSitNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Site Illicite Statut"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =6240
+                                            Top =3405
+                                            Width =1710
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteStaSitNumero"
+                                            Caption ="Statut du site:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2835
+                                    Top =3975
+                                    Width =2841
+                                    TabIndex =2
+                                    Name ="CmbDecSiteIlliciteSouSitNumero"
+                                    ControlSource ="DecSiteIlliciteSouSitNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLSOURCESITE.SouSitNumero, TBLSOURCESITE.SouSitNom FROM TBLSOURCESITE OR"
+                                        "DER BY TBLSOURCESITE.SouSitNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Site Illicite Source"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =3975
+                                            Width =2265
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteSouSitNumero"
+                                            Caption ="Source de détection:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7941
+                                    Top =3975
+                                    Width =6801
+                                    TabIndex =3
+                                    Name ="TxtDecSiteIlliciteURLAdresse"
+                                    ControlSource ="DecSiteIlliciteURLAdresse"
+                                    StatusBarText ="Site Illicite URL Adresse"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =6240
+                                            Top =3975
+                                            Width =1695
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteURLAdresse"
+                                            Caption ="Adresse URL:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin ComboBox
+                                    LimitToList = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    ColumnCount =2
+                                    Left =2820
+                                    Top =4530
+                                    Width =3996
+                                    TabIndex =4
+                                    Name ="CmbDecSiteIlliciteLocSitNumero"
+                                    ControlSource ="DecSiteIlliciteLocSitNumero"
+                                    RowSourceType ="Table/Query"
+                                    RowSource ="SELECT TBLLOCALISATIONSITE.LocSitNumero, TBLLOCALISATIONSITE.LocSitNom FROM TBLL"
+                                        "OCALISATIONSITE ORDER BY TBLLOCALISATIONSITE.LocSitNom; "
+                                    ColumnWidths ="0;2268"
+                                    StatusBarText ="Site Illicite Localisation"
+                                    FontName ="Tahoma"
+                                    OnNotInList ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =4530
+                                            Width =2265
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteLocSitNumero"
+                                            Caption ="Localisation:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2841
+                                    Top =5100
+                                    TabIndex =5
+                                    Name ="TxtDecSiteIlliciteHebergeur"
+                                    ControlSource ="DecSiteIlliciteHebergeur"
+                                    StatusBarText ="Site Illicite Hebergeur"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =5100
+                                            Width =2265
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteHebergeur"
+                                            Caption ="Hebergeur:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2826
+                                    Top =5670
+                                    Width =2841
+                                    Height =585
+                                    TabIndex =6
+                                    Name ="TxtDecSiteIlliciteHebergeurAdresse"
+                                    ControlSource ="DecSiteIlliciteHebergeurAdresse"
+                                    StatusBarText ="Site Illicite Hebergeur Adresse"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =5670
+                                            Width =2250
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteHebergeurAdresse"
+                                            Caption ="Hebergeur Adresse:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =7671
+                                    Top =5670
+                                    Width =1131
+                                    TabIndex =7
+                                    Name ="TxtDecSiteIlliciteHebergeurCodePostal"
+                                    ControlSource ="DecSiteIlliciteHebergeurCodePostal"
+                                    StatusBarText ="Site Illicite Hebergeur Code Postal"
+                                    FontName ="Tahoma"
+                                    InputMask ="00000;;_"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =5970
+                                            Top =5670
+                                            Width =1695
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteHebergeurCodePostal"
+                                            Caption ="Code Postal:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =9915
+                                    Top =5670
+                                    Width =2286
+                                    TabIndex =8
+                                    Name ="TxtDecSiteIlliciteHebergeurVille"
+                                    ControlSource ="DecSiteIlliciteHebergeurVille"
+                                    StatusBarText ="Site Illicite Hebergeur Ville"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =9075
+                                            Top =5670
+                                            Width =855
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteHebergeurVille"
+                                            Caption ="Ville:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =13341
+                                    Top =5670
+                                    Width =1416
+                                    TabIndex =9
+                                    Name ="TxtDecSiteIlliciteHebergeurPays"
+                                    ControlSource ="DecSiteIlliciteHebergeurPays"
+                                    StatusBarText ="Site Illicite Hebergeur Pays"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =12465
+                                            Top =5670
+                                            Width =900
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteHebergeurPays"
+                                            Caption ="Pays:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    ScrollBars =2
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2826
+                                    Top =6570
+                                    Width =11916
+                                    Height =660
+                                    TabIndex =10
+                                    Name ="TxtDecSiteIlliciteSuivi"
+                                    ControlSource ="DecSiteIlliciteSuivi"
+                                    StatusBarText ="Site Illicite Suivi"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =6570
+                                            Width =2280
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteSuivi"
+                                            Caption ="Suivi actions:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    ScrollBars =2
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =2820
+                                    Top =7365
+                                    Width =11931
+                                    Height =855
+                                    TabIndex =11
+                                    Name ="TxtDecSiteIlliciteCommentaire"
+                                    ControlSource ="DecSiteIlliciteCommentaire"
+                                    StatusBarText ="Site Illicite Commentaire"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =7365
+                                            Width =2250
+                                            Height =240
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecSiteIlliciteCommentaire"
+                                            Caption ="Commentaires:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                            End
+                        End
+                        Begin Page
+                            OverlapFlags =247
+                            Left =165
+                            Top =2880
+                            Width =14970
+                            Height =5670
+                            Name ="PgeLiaisonSecuriteFinanciere"
+                            Caption ="Liaison IGA/SF"
+                            Begin
+                                Begin TextBox
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =3120
+                                    Top =3405
+                                    Width =1146
+                                    ColumnWidth =2235
+                                    Name ="TxtDecLiaisonSFDate"
+                                    ControlSource ="DecLiaisonSFDate"
+                                    Format ="Short Date"
+                                    StatusBarText ="Fraude Liaison SF Date"
+                                    FontName ="Tahoma"
+                                    InputMask ="00/00/9999;0;_"
+                                    OnKeyDown ="[Event Procedure]"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =3405
+                                            Width =2550
+                                            Height =255
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecLiaisonSFDate"
+                                            Caption ="Date de transmission:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                                Begin TextBox
+                                    EnterKeyBehavior = NotDefault
+                                    ScrollBars =2
+                                    OverlapFlags =247
+                                    IMESentenceMode =3
+                                    Left =3120
+                                    Top =4545
+                                    Width =11646
+                                    Height =1980
+                                    ColumnWidth =2400
+                                    TabIndex =1
+                                    Name ="TxtDecLiaisonSFRetour"
+                                    ControlSource ="DecLiaisonSFRetour"
+                                    StatusBarText ="Fraude Liaison SF Retour"
+                                    FontName ="Tahoma"
+                                    Begin
+                                        Begin Label
+                                            OverlapFlags =255
+                                            Left =570
+                                            Top =4530
+                                            Width =2550
+                                            Height =255
+                                            FontSize =10
+                                            FontWeight =700
+                                            Name ="EtiDecLiaisonSFRetour"
+                                            Caption ="Echange IGA/SF:"
+                                            FontName ="Tahoma"
+                                        End
+                                    End
+                                End
+                            End
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    OverlapFlags =247
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =7665
+                    Top =225
+                    Width =2271
+                    ColumnWidth =2085
+                    TabIndex =1
+                    Name ="CmbDecTypDecNumero"
+                    ControlSource ="DecTypDecNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLTYPEDECLARATION.TypDecNumero, TBLTYPEDECLARATION.TypDecNom FROM TBLTYP"
+                        "EDECLARATION ORDER BY TBLTYPEDECLARATION.TypDecNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Declaration Type"
+                    FontName ="Tahoma"
+                    OnNotInList ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =255
+                            Left =5385
+                            Top =210
+                            Width =2295
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDecTypDecNumero"
+                            Caption ="Type de déclaration:"
+                            FontName ="Tahoma"
+                        End
+                    End
+                End
+                Begin Label
+                    SpecialEffect =1
+                    BackStyle =1
+                    OverlapFlags =119
+                    Left =90
+                    Top =735
+                    Width =2670
+                    Height =300
+                    FontSize =10
+                    FontWeight =700
+                    BackColor =16777215
+                    Name ="EtiDeclarant"
+                    Caption ="Emetteur de la déclaration"
+                    FontName ="Tahoma"
+                End
+            End
+        End
+        Begin FormFooter
+            Height =525
+            BackColor =16628127
+            Name ="PiedFormulaire"
+            Begin
+                Begin Rectangle
+                    OverlapFlags =93
+                    Width =15300
+                    Height =525
+                    Name ="BteControl"
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    Width =1695
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    Name ="CmdAjouter"
+                    Caption ="CREER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    Left =1695
+                    Width =1710
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="CmdModifier"
+                    Caption ="MODIFIER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    Left =3405
+                    Width =1695
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =2
+                    Name ="CmdSupprimer"
+                    Caption ="SUPPRIMER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+                Begin CommandButton
+                    Default = NotDefault
+                    OverlapFlags =215
+                    Left =10200
+                    Width =1725
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =3
+                    Name ="CmdValider"
+                    Caption ="VALIDER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    Left =11925
+                    Width =1695
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =4
+                    Name ="CmdAnnuler"
+                    Caption ="ANNULER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    Left =6240
+                    Width =1695
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =5
+                    Name ="CmdImprimer"
+                    Caption ="IMPRIMER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+                Begin CommandButton
+                    OverlapFlags =215
+                    Left =13620
+                    Width =1680
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =6
+                    Name ="CmdQuitter"
+                    Caption ="QUITTER"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Tahoma"
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmDeclaration.cls"

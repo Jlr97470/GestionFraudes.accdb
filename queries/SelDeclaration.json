@@ -1,0 +1,387 @@
+﻿{
+  "Info": {
+    "Class": "clsDbQuery",
+    "Description": "SelDeclaration"
+  },
+  "Items": {
+    "QueryType": 0,
+    "QueryProperties": {
+      "OrderByOn": {
+        "Type": 1,
+        "Value": true
+      }
+    },
+    "Columns": {
+      "DecBeneficiaireTypBenNom": {
+        "Caption": "Type_Beneficiaire",
+        "ColumnWidth": 1665,
+        "Description": "Type_Beneficiaire",
+        "AggregateType": -1
+      },
+      "DecDeclarantEntNom": {
+        "Caption": "Entite",
+        "Description": "Entite",
+        "AggregateType": -1
+      },
+      "DecDepotPlainteClientAutNom": {
+        "Caption": "Autorite_Depot Plainte Client",
+        "ColumnWidth": 2640,
+        "Description": "Autorite_Depot Plainte Client",
+        "AggregateType": -1
+      },
+      "DecDepotPlainteEntiteAutNom": {
+        "Caption": "Autorite_Depot Plainte Entite",
+        "ColumnWidth": 2655,
+        "Description": "Autorite_Depot Plainte Entite",
+        "AggregateType": -1
+      },
+      "DecFraudeSouIPNom": {
+        "Caption": "Source IP_Fraude",
+        "Description": "Source IP_Fraude",
+        "AggregateType": -1
+      },
+      "DecFraudeTypFrdNom": {
+        "Caption": "Type_Fraude",
+        "ColumnWidth": 2220,
+        "Description": "Type_Fraude",
+        "AggregateType": -1
+      },
+      "DecFraudeTypOpeNom": {
+        "Caption": "Type Operation_Fraude",
+        "Description": "Type Operation_Fraude",
+        "AggregateType": -1
+      },
+      "DecSiteIlliciteSouSitNom": {
+        "Caption": "Source_Site Illicite",
+        "Description": "Source_Site Illicite",
+        "AggregateType": -1
+      },
+      "DecSiteIlliciteStaSitNom": {
+        "Caption": "Statut_Site Illicite",
+        "ColumnWidth": 1665,
+        "Description": "Statut_Site Illicite",
+        "AggregateType": -1
+      },
+      "DecTypDecNom": {
+        "Caption": "Type_Declaration",
+        "ColumnWidth": 1635,
+        "Description": "Type_Declaration",
+        "AggregateType": -1
+      },
+      "DecVictimeMarNom": {
+        "Caption": "Marche_Victime",
+        "ColumnWidth": 1545,
+        "Description": "Marche_Victime",
+        "AggregateType": -1
+      },
+      "DecVictimeTypCptNom": {
+        "Caption": "Type Compte_Victime",
+        "ColumnWidth": 2055,
+        "Description": "Type Compte_Victime",
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireAgenceAdresse": {
+        "ColumnWidth": 2685,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireAgenceAppel": {
+        "ColumnWidth": 2460,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireAgenceResponsableNom": {
+        "ColumnWidth": 3105,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireAgenceResponsablePrenom": {
+        "ColumnWidth": 3375,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireAgenceResponsableTelephone1": {
+        "ColumnWidth": 3690,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireAgenceResponsableTelephone2": {
+        "ColumnWidth": 3690,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireBanque": {
+        "ColumnWidth": 1905,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireCommentaire": {
+        "ColumnWidth": 2400,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireNaissanceDate": {
+        "ColumnWidth": 2925,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireNaissanceLieu": {
+        "ColumnWidth": 2880,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireNom": {
+        "ColumnWidth": 1650,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiairePrenom": {
+        "ColumnWidth": 1920,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecBeneficiaireRIB": {
+        "ColumnWidth": 1560,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecDeclarantMail": {
+        "ColumnWidth": 1425,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecDeclarantNom": {
+        "ColumnWidth": 1470,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecDeclarantQualite": {
+        "ColumnWidth": 1680,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecDepotPlainteClientAccepter": {
+        "ColumnWidth": 2745,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecDepotPlainteEntiteAccepter": {
+        "ColumnWidth": 2760,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecFraudeAdresseIP": {
+        "ColumnWidth": 1800,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecFraudeDecaissementDate": {
+        "ColumnWidth": 2550,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecFraudeDecaissementHeure": {
+        "ColumnWidth": 2655,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecFraudeDecaissementMontant": {
+        "ColumnWidth": 2850,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecFraudeLibelle": {
+        "ColumnWidth": 1395,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteCommentaire": {
+        "ColumnWidth": 2295,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteDate": {
+        "ColumnWidth": 1545,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteHebergeur": {
+        "ColumnWidth": 2025,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteHebergeurAdresse": {
+        "ColumnWidth": 2805,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteHebergeurCodePostal": {
+        "ColumnWidth": 3150,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteHebergeurPays": {
+        "ColumnWidth": 2535,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteHebergeurVille": {
+        "ColumnWidth": 2460,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecSiteIlliciteSuivi": {
+        "ColumnWidth": 1545,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeAdresse": {
+        "ColumnWidth": 1620,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeAgence": {
+        "ColumnWidth": 1560,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeAgenceAdresse": {
+        "ColumnWidth": 2340,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeAgenceCodePostal": {
+        "ColumnWidth": 2685,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeAgencePays": {
+        "ColumnWidth": 2070,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeAgenceVille": {
+        "ColumnWidth": 1995,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeRIB": {
+        "ColumnWidth": 1215,
+        "AggregateType": -1
+      },
+      "TBLDECLARATION.DecVictimeVille": {
+        "ColumnWidth": 1275,
+        "AggregateType": -1
+      }
+    },
+    "DesignLayout": {
+      "State": 0,
+      "Window": {
+        "left": -640,
+        "top": 206,
+        "right": 887,
+        "bottom": 1047
+      },
+      "DesignerPane": {
+        "left": -1,
+        "top": -1,
+        "right": 1520,
+        "bottom": 525
+      },
+      "GridLeft": 0,
+      "GridTop": 0,
+      "ColumnsShown": 539,
+      "Tables": [
+        {
+          "Name": "TBLTYPEOPERATION",
+          "Alias": "",
+          "Left": 213,
+          "Top": 472,
+          "Right": 446,
+          "Bottom": 560,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEDECLARATION",
+          "Alias": "",
+          "Left": 213,
+          "Top": 2,
+          "Right": 437,
+          "Bottom": 90,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPECOMPTE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 198,
+          "Right": 439,
+          "Bottom": 286,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEBENEFICIAIRE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 382,
+          "Right": 442,
+          "Bottom": 470,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLSTATUTSITE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 929,
+          "Right": 450,
+          "Bottom": 1017,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLSOURCESITE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 1021,
+          "Right": 451,
+          "Bottom": 1109,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEFRAUDE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 562,
+          "Right": 447,
+          "Bottom": 650,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLMARCHE",
+          "Alias": "",
+          "Left": 214,
+          "Top": 291,
+          "Right": 438,
+          "Bottom": 379,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLLOCALISATIONSITE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 1112,
+          "Right": 451,
+          "Bottom": 1200,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLSOURCEIP",
+          "Alias": "",
+          "Left": 213,
+          "Top": 653,
+          "Right": 448,
+          "Bottom": 741,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLENTITE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 92,
+          "Right": 438,
+          "Bottom": 195,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLAUTORITE",
+          "Alias": "",
+          "Left": 213,
+          "Top": 746,
+          "Right": 449,
+          "Bottom": 834,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLDECLARATION",
+          "Alias": "",
+          "Left": 737,
+          "Top": 4,
+          "Right": 1013,
+          "Bottom": 782,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLAUTORITE_1",
+          "Alias": "",
+          "Left": 213,
+          "Top": 838,
+          "Right": 450,
+          "Bottom": 926,
+          "ScrollTop": 0
+        }
+      ]
+    }
+  }
+}

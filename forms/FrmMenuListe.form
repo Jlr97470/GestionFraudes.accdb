@@ -1,0 +1,210 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    AllowFilters = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    AllowEdits = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =0
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =15300
+    DatasheetFontHeight =10
+    ItemSuffix =13
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0xb7af2a5d71dee240
+    End
+    Caption ="Menu des listes deroulante"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnActivate ="[Event Procedure]"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =9075
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =1245
+                    Width =4530
+                    Height =405
+                    TabIndex =1
+                    Name ="CmdListeEntite"
+                    Caption ="Liste des entités"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =1815
+                    Width =4530
+                    Height =405
+                    TabIndex =2
+                    Name ="CmdListeTypeCompte"
+                    Caption ="Liste des types de compte"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =4065
+                    Width =4530
+                    Height =405
+                    TabIndex =6
+                    Name ="CmdListeTypeFraude"
+                    Caption ="Liste des types de fraude"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =660
+                    Width =4530
+                    Height =405
+                    Name ="CmdListeTypeDeclaration"
+                    Caption ="Liste des types de déclaration"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =2385
+                    Width =4530
+                    Height =405
+                    TabIndex =3
+                    Name ="CmdListeMarche"
+                    Caption ="Liste des marchés"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =3510
+                    Width =4530
+                    Height =405
+                    TabIndex =5
+                    Name ="CmdListeTypeOperation"
+                    Caption ="Liste des types d'opération"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =5205
+                    Width =4530
+                    Height =405
+                    TabIndex =8
+                    Name ="CmdListeAutorite"
+                    Caption ="Liste des autorités"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =14175
+                    Top =8505
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =11
+                    Name ="CmdQuitter"
+                    Caption ="QUITTER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =2940
+                    Width =4530
+                    Height =405
+                    TabIndex =4
+                    Name ="CmdTypeBeneficiaire"
+                    Caption ="Liste des types de bénéficiaire"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =5775
+                    Width =4515
+                    Height =405
+                    TabIndex =9
+                    Name ="CmdListeStatutSite"
+                    Caption ="Liste des status de site"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =6360
+                    Width =4530
+                    Height =405
+                    TabIndex =10
+                    Name ="CmdListeSourceSite"
+                    Caption ="Liste des sources de site"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =4635
+                    Width =4530
+                    Height =405
+                    TabIndex =7
+                    Name ="CmdListeSourceIP"
+                    Caption ="Liste des sources d'IP"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5400
+                    Top =6930
+                    Width =4530
+                    Height =405
+                    TabIndex =12
+                    Name ="CmdListeLocalisationSite"
+                    Caption ="Liste des localisations de site"
+                    OnClick ="[Event Procedure]"
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmMenuListe.cls"

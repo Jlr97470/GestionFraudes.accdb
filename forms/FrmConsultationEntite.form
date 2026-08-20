@@ -1,0 +1,205 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    AllowFilters = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =62
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =15300
+    DatasheetFontHeight =10
+    ItemSuffix =24
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0x7277888292dee240
+    End
+    Caption ="Consultation par entité"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnActivate ="[Event Procedure]"
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin ListBox
+            SpecialEffect =2
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =9075
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin ListBox
+                    ColumnHeads = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ColumnCount =7
+                    Top =1980
+                    Width =15300
+                    Height =6240
+                    BoundColumn =-1
+                    Name ="LstConsultationEntite"
+                    RowSourceType ="Table/Query"
+                    OnDblClick ="[Event Procedure]"
+                End
+                Begin ComboBox
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =3
+                    Left =1695
+                    Top =585
+                    Width =2841
+                    TabIndex =1
+                    Name ="CmbEntite"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLENTITE.EntNumero, TBLENTITE.EntCode, TBLENTITE.EntNom FROM TBLENTITE; "
+                    ColumnWidths ="0;0;2268"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =570
+                            Top =570
+                            Width =1125
+                            Height =240
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiEntite"
+                            Caption ="Entité:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =6255
+                    Top =570
+                    TabIndex =2
+                    Name ="TxtNumero"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =5100
+                            Top =570
+                            Width =1140
+                            Height =240
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiNumero"
+                            Caption ="Numero:"
+                        End
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =14175
+                    Top =8505
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =3
+                    Name ="CmdQuitter"
+                    Caption ="QUITTER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    Default = NotDefault
+                    OverlapFlags =85
+                    Left =14175
+                    Top =1140
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =4
+                    Name ="CmdValider"
+                    Caption ="VALIDER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =10770
+                    Top =570
+                    Width =2841
+                    TabIndex =5
+                    Name ="CmbTypeDeclaration"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLTYPEDECLARATION.TypDecNumero, TBLTYPEDECLARATION.TypDecNom FROM TBLTYP"
+                        "EDECLARATION ORDER BY TBLTYPEDECLARATION.TypDecNom; "
+                    ColumnWidths ="0;2268"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =8505
+                            Top =570
+                            Width =2250
+                            Height =240
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiTypeDeclaration"
+                            Caption ="Type de déclaration:"
+                        End
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmConsultationEntite.cls"

@@ -1,0 +1,64 @@
+﻿{
+  "Info": {
+    "Class": "clsDbQuery",
+    "Description": "AnaNbDeclarationType"
+  },
+  "Items": {
+    "QueryType": 16,
+    "Columns": {
+      "Détection site illicite": {
+        "ColumnWidth": 1935,
+        "AggregateType": -1
+      },
+      "Fraude avérée": {
+        "ColumnWidth": 1395,
+        "AggregateType": -1
+      },
+      "Fraude avérer": {
+        "ColumnWidth": 1350,
+        "AggregateType": -1
+      },
+      "Tentative de fraude": {
+        "ColumnWidth": 1800,
+        "AggregateType": -1
+      },
+      "TOTAL": {
+        "ColumnWidth": 780,
+        "AggregateType": -1
+      },
+      "TOTAL GENERAL": {
+        "ColumnWidth": 1770,
+        "AggregateType": -1
+      }
+    },
+    "DesignLayout": {
+      "State": 0,
+      "Window": {
+        "left": 296,
+        "top": 380,
+        "right": 839,
+        "bottom": 480
+      },
+      "DesignerPane": {
+        "left": -1,
+        "top": -1,
+        "right": 1593,
+        "bottom": 768
+      },
+      "GridLeft": 0,
+      "GridTop": 0,
+      "ColumnsShown": 559,
+      "Tables": [
+        {
+          "Name": "TBLTYPEDECLARATION",
+          "Alias": "",
+          "Left": 275,
+          "Top": 6,
+          "Right": 371,
+          "Bottom": 94,
+          "ScrollTop": 0
+        }
+      ]
+    }
+  }
+}

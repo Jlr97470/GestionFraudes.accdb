@@ -1,0 +1,62 @@
+﻿{
+  "Info": {
+    "Class": "clsDbQuery",
+    "Description": "AjoLstDec"
+  },
+  "Items": {
+    "QueryType": 64,
+    "QueryProperties": {
+      "RecordLocks": {
+        "Type": 2,
+        "Value": 2
+      }
+    },
+    "DesignLayout": {
+      "State": 0,
+      "Window": {
+        "left": 18,
+        "top": 40,
+        "right": 1578,
+        "bottom": 719
+      },
+      "DesignerPane": {
+        "left": -1,
+        "top": -1,
+        "right": 1553,
+        "bottom": 497
+      },
+      "GridLeft": 0,
+      "GridTop": 0,
+      "ColumnsShown": 651,
+      "Tables": [
+        {
+          "Name": "LSTDEC",
+          "Alias": "",
+          "Left": 9,
+          "Top": 6,
+          "Right": 292,
+          "Bottom": 169,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLENTITE",
+          "Alias": "",
+          "Left": 330,
+          "Top": 6,
+          "Right": 426,
+          "Bottom": 109,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEFRAUDE",
+          "Alias": "",
+          "Left": 380,
+          "Top": 139,
+          "Right": 476,
+          "Bottom": 227,
+          "ScrollTop": 0
+        }
+      ]
+    }
+  }
+}

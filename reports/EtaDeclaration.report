@@ -1,0 +1,1830 @@
+﻿Version =20
+VersionRequired =20
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =8511
+    DatasheetFontHeight =10
+    ItemSuffix =181
+    Left =4605
+    DatasheetGridlinesColor =12632256
+    Filter ="(DecNumero=137)"
+    ShortcutMenuBar ="EditionGestionFraudes"
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0x4f694dd2b5dee240
+    End
+    RecordSource ="TBLDECLARATION"
+    Caption ="Declaration De Fraude"
+    OnOpen ="[Event Procedure]"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnActivate ="[Event Procedure]"
+    Begin
+        Begin Label
+            FontItalic = NotDefault
+            BackStyle =0
+            TextAlign =1
+            TextFontFamily =18
+            FontSize =11
+            FontWeight =700
+            ForeColor =8388608
+            FontName ="Times New Roman"
+        End
+        Begin Rectangle
+            BackStyle =0
+            BorderWidth =1
+            Width =850
+            Height =850
+            BorderColor =8388608
+        End
+        Begin Line
+            Width =1701
+            BorderColor =8388608
+        End
+        Begin Image
+            OldBorderStyle =0
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin BoundObjectFrame
+            Width =4536
+            Height =2835
+            LabelX =-1701
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            BackStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Arial"
+            AsianLineBreak =255
+        End
+        Begin ListBox
+            OldBorderStyle =0
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontName ="Arial"
+        End
+        Begin ComboBox
+            OldBorderStyle =0
+            BackStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Arial"
+        End
+        Begin Subform
+            OldBorderStyle =0
+            Width =1701
+            Height =1701
+        End
+        Begin UnboundObjectFrame
+            Width =4536
+            Height =2835
+        End
+        Begin PageHeader
+            Height =240
+            Name ="ZoneEntêtePage"
+            Begin
+                Begin TextBox
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Width =1146
+                    Name ="TxtDate"
+                    ControlSource ="=Date()"
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            ForceNewPage =2
+            Height =13650
+            Name ="Détail"
+            Begin
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =780
+                    Width =855
+                    ColumnWidth =2700
+                    Name ="TxtDecDateCreation"
+                    ControlSource ="DecDateCreation"
+                    Format ="Short Date"
+                    StatusBarText ="Declaration Date De Creation"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Top =780
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDateCreation"
+                            Caption ="Date d'enregistrement:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =780
+                    Width =855
+                    ColumnWidth =3015
+                    TabIndex =1
+                    Name ="TxtDecDateModification"
+                    ControlSource ="DecDateModification"
+                    Format ="Short Date"
+                    StatusBarText ="Declaration Date De Modification"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =780
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDateModification"
+                            Caption ="Date de mise a jour:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    Visible = NotDefault
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1140
+                    Top =330
+                    Width =555
+                    Height =330
+                    ColumnWidth =1815
+                    FontSize =12
+                    FontWeight =700
+                    TabIndex =2
+                    ForeColor =8388608
+                    Name ="CmbDecDeclarantEntNumero"
+                    ControlSource ="DecDeclarantEntNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLENTITE.EntNumero, TBLENTITE.EntNom FROM TBLENTITE ORDER BY TBLENTITE.E"
+                        "ntNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Declarant Entite"
+                    FontName ="Times New Roman"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =1440
+                    Width =2280
+                    TabIndex =3
+                    Name ="TxtDecDeclarantNom"
+                    ControlSource ="DecDeclarantNom"
+                    StatusBarText ="Declarant Nom"
+                    Begin
+                        Begin Label
+                            Top =1440
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDeclarantNom"
+                            Caption ="Nom du déclarant:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =1440
+                    Width =2265
+                    ColumnWidth =1740
+                    TabIndex =4
+                    Name ="TxtDecDeclarantPrenom"
+                    ControlSource ="DecDeclarantPrenom"
+                    StatusBarText ="Declarant Prenom"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =1440
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDeclarantPrenom"
+                            Caption ="Prénom du déclarant:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =1680
+                    Width =2835
+                    ColumnWidth =1755
+                    TabIndex =5
+                    Name ="TxtDecDeclarantQualite"
+                    ControlSource ="DecDeclarantQualite"
+                    StatusBarText ="Declarant Qualite"
+                    Begin
+                        Begin Label
+                            Top =1680
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDeclarantQualite"
+                            Caption ="Qualité du déclarant:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =1920
+                    Width =1710
+                    ColumnWidth =2115
+                    TabIndex =6
+                    Name ="TxtDecDeclarantTelephone1"
+                    ControlSource ="DecDeclarantTelephone1"
+                    StatusBarText ="Declarant Telephone1"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            Top =1920
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDeclarantTelephone1"
+                            Caption ="Téléphone 1:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =1920
+                    Width =1695
+                    ColumnWidth =2115
+                    TabIndex =7
+                    Name ="TxtDecDeclarantTelephone2"
+                    ControlSource ="DecDeclarantTelephone2"
+                    StatusBarText ="Declarant Telephone2"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =1920
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDeclarantTelephone2"
+                            Caption ="Téléphone 2:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6225
+                    Top =1680
+                    Width =2280
+                    ColumnWidth =2115
+                    TabIndex =8
+                    Name ="TxtDecDeclarantMail"
+                    ControlSource ="DecDeclarantMail"
+                    StatusBarText ="Declarant Mail"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =1680
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDeclarantMail"
+                            Caption ="Mail du déclarant:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =2460
+                    Width =2280
+                    ColumnWidth =1305
+                    TabIndex =9
+                    Name ="DecVictimeNom"
+                    ControlSource ="DecVictimeNom"
+                    StatusBarText ="Victime Nom"
+                    Begin
+                        Begin Label
+                            Top =2460
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="DecVictimeNom_Étiquette"
+                            Caption ="Nom de la victime:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =2460
+                    Width =2265
+                    ColumnWidth =1575
+                    TabIndex =10
+                    Name ="DecVictimePrenom"
+                    ControlSource ="DecVictimePrenom"
+                    StatusBarText ="Victime Prenom"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =2460
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="DecVictimePrenom_Étiquette"
+                            Caption ="Prénom de la victime:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =2700
+                    Width =855
+                    ColumnWidth =2580
+                    TabIndex =11
+                    Name ="DecVictimeNaissanceDate"
+                    ControlSource ="DecVictimeNaissanceDate"
+                    Format ="Short Date"
+                    StatusBarText ="Victime Date De Naissance"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Top =2700
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="DecVictimeNaissanceDate_Étiquette"
+                            Caption ="Date de naissance:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =2700
+                    Width =2265
+                    ColumnWidth =2535
+                    TabIndex =12
+                    Name ="DecVictimeNaissanceLieu"
+                    ControlSource ="DecVictimeNaissanceLieu"
+                    StatusBarText ="Victime Lieu De Naissance"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =2700
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="DecVictimeNaissanceLieu_Étiquette"
+                            Caption ="Lieu de naissance:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =2940
+                    Width =2835
+                    Height =675
+                    ColumnWidth =2550
+                    TabIndex =13
+                    Name ="TxtDecVictimeAdresseCodePostalVillePays"
+                    ControlSource ="=[DecVictimeAdresse] & Chr(13) & Chr(10) & [DecVictimeCodePostal] & \" \" & [Dec"
+                        "VictimeVille] & \" \" & [DecVictimePays]"
+                    StatusBarText ="Victime Adresse"
+                    Begin
+                        Begin Label
+                            Top =2940
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecVictimeAdresseCodePostalVillePays"
+                            Caption ="Adresse de la victime:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =7500
+                    Width =855
+                    ColumnWidth =1245
+                    TabIndex =14
+                    Name ="TxtDecFraudeDate"
+                    ControlSource ="DecFraudeDate"
+                    Format ="Short Date"
+                    StatusBarText ="Fraude Date"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Top =7500
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeDate"
+                            Caption ="Date de l'opération:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =7740
+                    Width =1140
+                    ColumnWidth =1545
+                    TabIndex =15
+                    Name ="TxtDecFraudeMontant"
+                    ControlSource ="DecFraudeMontant"
+                    Format ="#,##0.00 €;-#,##0.00 €"
+                    StatusBarText ="Fraude Montant"
+                    Begin
+                        Begin Label
+                            Top =7740
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeMontant"
+                            Caption ="Montant:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1410
+                    Top =7980
+                    Width =3120
+                    ColumnWidth =2295
+                    TabIndex =16
+                    Name ="TxtDecFraudeLibelle"
+                    ControlSource ="DecFraudeLibelle"
+                    StatusBarText ="Fraude Libelle Operation"
+                    Begin
+                        Begin Label
+                            Top =7980
+                            Width =1410
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeLibelle"
+                            Caption ="Libelle opération:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =6000
+                    Width =2835
+                    TabIndex =17
+                    Name ="TxtDecBeneficiareRIB"
+                    ControlSource ="DecBeneficiaireRIB"
+                    StatusBarText ="Beneficiare RIB"
+                    Begin
+                        Begin Label
+                            Top =6000
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiareRIB"
+                            Caption ="RIB du bénéficiaire:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =4875
+                    Width =2280
+                    ColumnWidth =1605
+                    TabIndex =18
+                    Name ="TxtDecBeneficiaireNom"
+                    ControlSource ="DecBeneficiaireNom"
+                    StatusBarText ="Beneficiare Nom"
+                    Begin
+                        Begin Label
+                            Top =4875
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireNom"
+                            Caption ="Nom du bénéficiaire:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =4875
+                    Width =2265
+                    ColumnWidth =1875
+                    TabIndex =19
+                    Name ="TxtDecBeneficiairePrenom"
+                    ControlSource ="DecBeneficiairePrenom"
+                    StatusBarText ="Beneficiare Prenom"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =4875
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiairePrenom"
+                            Caption ="Prénom du bénéficiare:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =5115
+                    Width =855
+                    ColumnWidth =2880
+                    TabIndex =20
+                    Name ="TxtDecBeneficiaireNaissanceDate"
+                    ControlSource ="DecBeneficiaireNaissanceDate"
+                    Format ="Short Date"
+                    StatusBarText ="Beneficiare Date De Naissance"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Top =5115
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireNaissanceDate"
+                            Caption ="Date de naissance:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =5115
+                    Width =2265
+                    ColumnWidth =2835
+                    TabIndex =21
+                    Name ="TxtDecBeneficiaireNaissanceLieu"
+                    ControlSource ="DecBeneficiaireNaissanceLieu"
+                    StatusBarText ="Beneficiare Lieu De Naissance"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =5115
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireNaissanceLieu"
+                            Caption ="Lieu de naissance:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =5355
+                    Width =2835
+                    Height =645
+                    ColumnWidth =1920
+                    TabIndex =22
+                    Name ="TxtDecBeneficiaireAdresseCodePostalVillePays"
+                    ControlSource ="=[DecBeneficiaireAdresse] & chr(13) & chr(10) & [DecBeneficiaireCodePostal] & \""
+                        " \" & [DecBeneficiaireVille] & \" \" & [DecBeneficiairePays]"
+                    StatusBarText ="Beneficiare Adresse"
+                    Begin
+                        Begin Label
+                            Top =5355
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAdresseCodePostalVillePays"
+                            Caption ="Adresse du bénéficiaire:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =9015
+                    Width =855
+                    ColumnWidth =3030
+                    TabIndex =23
+                    Name ="TxtDecDepotPlainteClientDate"
+                    ControlSource ="DecDepotPlainteClientDate"
+                    Format ="Short Date"
+                    StatusBarText ="Fraude Depot Plainte Client Date"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =9015
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteClientDate"
+                            Caption ="Date de dépôt:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1695
+                    Top =9255
+                    Width =1710
+                    ColumnWidth =3300
+                    TabIndex =24
+                    Name ="CmbDecDepotPlainteClientAutNumero"
+                    ControlSource ="DecDepotPlainteClientAutNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLAUTORITE.AutNumero, TBLAUTORITE.AutNom FROM TBLAUTORITE ORDER BY TBLAU"
+                        "TORITE.AutNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Fraude Depot Plainte Client Autorite"
+                    Begin
+                        Begin Label
+                            Top =9255
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteClientAutNumero"
+                            Caption ="Autorité de dépôt:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =9255
+                    Width =2265
+                    ColumnWidth =2985
+                    TabIndex =25
+                    Name ="TxtDecDepotPlainteClientLieu"
+                    ControlSource ="DecDepotPlainteClientLieu"
+                    StatusBarText ="Fraude Depot Plainte Client Lieu"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =9255
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteClientLieu"
+                            Caption ="Lieu de dépôt:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4395
+                    Top =9495
+                    Width =4110
+                    ColumnWidth =3045
+                    TabIndex =26
+                    Name ="DecDepotPlainteClientMotif"
+                    ControlSource ="DecDepotPlainteClientMotif"
+                    StatusBarText ="Fraude Depot Plainte Client Motif"
+                    Begin
+                        Begin Label
+                            Left =2685
+                            Top =9495
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="DecDepotPlainteClientMotif_Étiquette"
+                            Caption ="Motif du refus:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =10050
+                    Width =840
+                    ColumnWidth =3045
+                    TabIndex =27
+                    Name ="TxtDecDepotPlainteEntiteDate"
+                    ControlSource ="DecDepotPlainteEntiteDate"
+                    Format ="Short Date"
+                    StatusBarText ="Fraude Depot Plainte Entite Date"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =10050
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteEntiteDate"
+                            Caption ="Date de dépôt:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1695
+                    Top =10290
+                    Width =1710
+                    ColumnWidth =3315
+                    TabIndex =28
+                    Name ="CmbDecDepotPlainteEntiteAutNumero"
+                    ControlSource ="DecDepotPlainteEntiteAutNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLAUTORITE.AutNumero, TBLAUTORITE.AutNom FROM TBLAUTORITE ORDER BY TBLAU"
+                        "TORITE.AutNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Fraude Depot Plainte Entite Autorite"
+                    Begin
+                        Begin Label
+                            Top =10290
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteEntiteAutNumero"
+                            Caption ="Autorité de dépôt:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =10290
+                    Width =2265
+                    ColumnWidth =3000
+                    TabIndex =29
+                    Name ="TxtDecDepotPlainteEntiteLieu"
+                    ControlSource ="DecDepotPlainteEntiteLieu"
+                    StatusBarText ="Fraude Depot Plainte Entite Lieu"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =10290
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteEntiteLieu"
+                            Caption ="Lieu de dépôt:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4395
+                    Top =10530
+                    Width =4110
+                    ColumnWidth =3060
+                    TabIndex =30
+                    Name ="TxtDecDepotPlainteEntiteMotif"
+                    ControlSource ="DecDepotPlainteEntiteMotif"
+                    StatusBarText ="Fraude Depot Plainte Entite Motif"
+                    Begin
+                        Begin Label
+                            Left =2685
+                            Top =10530
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteEntiteMotif"
+                            Caption ="Motif du refus:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =12990
+                    Width =870
+                    ColumnWidth =2235
+                    TabIndex =31
+                    Name ="TxtDecLiaisonSFDate"
+                    ControlSource ="DecLiaisonSFDate"
+                    Format ="Short Date"
+                    StatusBarText ="Fraude Liaison SF Date"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            Top =12990
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecLiaisonSFDate"
+                            Caption ="Date de transmission:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =13230
+                    Width =6810
+                    Height =420
+                    ColumnWidth =2400
+                    TabIndex =32
+                    Name ="TxtDecLiaisonSFRetour"
+                    ControlSource ="DecLiaisonSFRetour"
+                    StatusBarText ="Fraude Liaison SF Retour"
+                    Begin
+                        Begin Label
+                            Top =13230
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecLiaisonSFRetour"
+                            Caption ="Echanges IGA/SF:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =9015
+                    Width =591
+                    TabIndex =33
+                    Name ="TxtDecDepotPlainteClient"
+                    ControlSource ="=IIf([DecDepotPlainteClient],\"Oui\",\"Non\")"
+                    Begin
+                        Begin Label
+                            Top =9015
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteClient"
+                            Caption ="Dépôt:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =10050
+                    Width =576
+                    TabIndex =34
+                    Name ="TxtDecDepotPlainteEntite"
+                    ControlSource ="=IIf([DecDepotPlainteEntite],\"Oui\",\"Non\")"
+                    Begin
+                        Begin Label
+                            Top =10050
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteEntite"
+                            Caption ="Dépot:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    TextAlign =2
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =1980
+                    Width =3966
+                    Height =330
+                    ColumnWidth =1890
+                    FontSize =12
+                    FontWeight =700
+                    TabIndex =35
+                    ForeColor =8388608
+                    Name ="TxtDecNumero"
+                    ControlSource ="=\"DECLARATION N°\" & [DecNumero]"
+                    StatusBarText ="Declaration Numero"
+                    FontName ="Times New Roman"
+                End
+                Begin TextBox
+                    TextAlign =1
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =1140
+                    Top =330
+                    Width =6231
+                    Height =330
+                    ColumnWidth =1620
+                    FontSize =12
+                    FontWeight =700
+                    TabIndex =36
+                    ForeColor =8388608
+                    Name ="TxtDecDate"
+                    ControlSource ="=\"Entité: \" & CmbDecDeclarantEntNumero.Column(1) & \"    Date de déclaration: "
+                        "\" & [DecDate]"
+                    StatusBarText ="Declaration Date"
+                    FontName ="Times New Roman"
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =1140
+                    Width =2535
+                    Height =300
+                    Name ="EtiEmeteurDeclaration"
+                    Caption ="Emeteur de la déclaration"
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =2160
+                    Width =2535
+                    Height =300
+                    Name ="EtiIdentiteVictime"
+                    Caption ="Identité de la victime"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6246
+                    Top =2940
+                    Width =1686
+                    ColumnWidth =1950
+                    TabIndex =37
+                    Name ="TxtDecVictimeTelephone1"
+                    ControlSource ="DecVictimeTelephone1"
+                    StatusBarText ="Victime Telephone1"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =2940
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecVictimeTelephone1"
+                            Caption ="Téléphone 1:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6246
+                    Top =3180
+                    Width =1686
+                    ColumnWidth =1950
+                    TabIndex =38
+                    Name ="TxtDecVictimeTelephone2"
+                    ControlSource ="DecVictimeTelephone2"
+                    StatusBarText ="Victime Telephone2"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =3180
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecVictimeTelephone2"
+                            Caption ="Téléphone 2:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =3615
+                    Width =2826
+                    ColumnWidth =2775
+                    TabIndex =39
+                    Name ="TxtDecVictimeRIB"
+                    ControlSource ="DecVictimeRIB"
+                    StatusBarText ="Victime RIB"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =3615
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecVictimeRIB"
+                            Caption ="RIB de la victime:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1701
+                    Top =3855
+                    Width =2271
+                    ColumnWidth =2055
+                    TabIndex =40
+                    Name ="CmbDecVictimeTypCptNumero"
+                    ControlSource ="DecVictimeTypCptNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLTYPECOMPTE.TypCptNumero, TBLTYPECOMPTE.TypCptNom FROM TBLTYPECOMPTE; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Victime Type Compte"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =3855
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecVictimeTypCptNumero"
+                            Caption ="Type de compte:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =5670
+                    Top =3615
+                    Width =2841
+                    Height =735
+                    ColumnWidth =1845
+                    TabIndex =41
+                    Name ="TxtDecVictimeAgenceAdresseCodePostalVillePays"
+                    ControlSource ="=[DecVictimeAgence] & chr(13) & chr(10) & [DecVictimeAgenceAdresse] & chr(13) & "
+                        "chr(10) & [DecVictimeAgenceCodePostal] & \" \" & [DecVictimeAgenceVille] & \" \""
+                        " & [DecVictimeAgencePays]"
+                    StatusBarText ="Victime Agence"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =3615
+                            Width =1140
+                            Height =450
+                            FontSize =8
+                            Name ="EtiDecVictimeAgenceAdresseCodePostalVillePays"
+                            Caption ="Agence de la victime:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1701
+                    Top =4095
+                    Width =1986
+                    ColumnWidth =1545
+                    TabIndex =42
+                    BoundColumn =1
+                    Name ="CmbDecVictimeMarNumero"
+                    ControlSource ="DecVictimeMarNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLMARCHE.MarNom, TBLMARCHE.MarNumero FROM TBLMARCHE ORDER BY TBLMARCHE.M"
+                        "arNom; "
+                    ColumnWidths ="2268;0"
+                    StatusBarText ="Victime Marche"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =4095
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecVictimeMarNumero"
+                            Caption ="Marché:"
+                        End
+                    End
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =4335
+                    Width =2535
+                    Height =300
+                    Name ="EtiIdentiteBeneficiaire"
+                    Caption ="Identité du bénéficiaire"
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1701
+                    Top =4635
+                    TabIndex =43
+                    Name ="CmbDecBeneficiaireTypBenNumero"
+                    ControlSource ="DecBeneficiaireTypBenNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLTYPEBENEFICIAIRE.TypBenNumero, TBLTYPEBENEFICIAIRE.TypBenNom FROM TBLT"
+                        "YPEBENEFICIAIRE ORDER BY TBLTYPEBENEFICIAIRE.TypBenNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Beneficiaire Type"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =4635
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireTypBenNumero"
+                            Caption ="Type de bénéficiare:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6246
+                    Top =5355
+                    Width =1686
+                    ColumnWidth =2295
+                    TabIndex =44
+                    Name ="TxtDecBeneficiaireTelephone1"
+                    ControlSource ="DecBeneficiaireTelephone1"
+                    StatusBarText ="Beneficiaire Telephone1"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =5355
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireTelephone1"
+                            Caption ="Téléphone 1:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6246
+                    Top =5595
+                    Width =1686
+                    ColumnWidth =2295
+                    TabIndex =45
+                    Name ="TxtDecBeneficiaireTelephone2"
+                    ControlSource ="DecBeneficiaireTelephone2"
+                    StatusBarText ="Beneficiaire Telephone2"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =5595
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireTelephone2"
+                            Caption ="Téléphone 2:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =5676
+                    Top =6030
+                    Width =2826
+                    Height =690
+                    ColumnWidth =1905
+                    TabIndex =46
+                    Name ="TxtDecBeneficiaireAgenceAdresseCodePostalVillePays"
+                    ControlSource ="=[DecBeneficiaireAgence] & chr(13) & chr(10) & [DecBeneficiaireAgenceAdresse] & "
+                        "chr(13) & chr(10) & [DecBeneficiaireAgenceCodePostal] & \" \" & [DecBeneficiaire"
+                        "AgenceVille] & \" \" & [DecBeneficiaireAgencePays]"
+                    StatusBarText ="Beneficiaire Agence"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =6030
+                            Width =1140
+                            Height =450
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAgenceAdresseCodePostalVillePays"
+                            Caption ="Agence du bénéficiaire:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =6480
+                    Width =576
+                    TabIndex =47
+                    Name ="TxtDecBeneficiaireAgenceAppel"
+                    ControlSource ="=IIf([DecBeneficiaireAgenceAppel],\"Oui\",\"Non\")"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =6480
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAgenceAppel"
+                            Caption ="Agence contactée:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =6720
+                    Width =2271
+                    ColumnWidth =3720
+                    TabIndex =48
+                    Name ="TxtDecBeneficiaireAgenceResponsableNom"
+                    ControlSource ="DecBeneficiaireAgenceResponsableNom"
+                    StatusBarText ="Beneficiaire Agence Contact Nom"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =6720
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAgenceResponsableNom"
+                            Caption ="Nom du contact:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6246
+                    Top =6720
+                    Width =2256
+                    ColumnWidth =3825
+                    TabIndex =49
+                    Name ="TxtDecBeneficiaireAgenceResponsablePrenom"
+                    ControlSource ="DecBeneficiaireAgenceResponsablePrenom"
+                    StatusBarText ="Beneficiaire Agence Contact Prenom"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =6720
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAgenceResponsablePrenom"
+                            Caption ="Prénom du contact:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =6960
+                    ColumnWidth =4140
+                    TabIndex =50
+                    Name ="TxtDecBeneficiaireAgenceResponsableTelephone1"
+                    ControlSource ="DecBeneficiaireAgenceResponsableTelephone1"
+                    StatusBarText ="Beneficiaire Agence Contact Telephone1"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =6960
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAgenceResponsableTelephone1"
+                            Caption ="Téléphone 1:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6246
+                    Top =6960
+                    Width =1686
+                    ColumnWidth =4140
+                    TabIndex =51
+                    Name ="TxtDecBeneficiaireAgenceResponsableTelephone2"
+                    ControlSource ="DecBeneficiaireAgenceResponsableTelephone2"
+                    StatusBarText ="Beneficiaire Agence Contact Telephone2"
+                    InputMask ="00\\ 00\\ 00\\ 00\\ 00;;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =6960
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecBeneficiaireAgenceResponsableTelephone2"
+                            Caption ="Téléphone 2:"
+                        End
+                    End
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =7200
+                    Width =2535
+                    Height =300
+                    Name ="EtiQualificationFraude"
+                    Caption ="Qualification de la fraude"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4386
+                    Top =7500
+                    Width =846
+                    TabIndex =52
+                    Name ="TxtDecFraudeHeure"
+                    ControlSource ="DecFraudeHeure"
+                    Format ="Long Time"
+                    StatusBarText ="Fraude Heure"
+                    InputMask ="00:00;0;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =2685
+                            Top =7500
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeHeure"
+                            Caption ="Heure de l'opération:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =6816
+                    Top =7500
+                    Width =1686
+                    ColumnWidth =1410
+                    TabIndex =53
+                    Name ="CmbDecFraudeTypOpeNumero"
+                    ControlSource ="DecFraudeTypOpeNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLTYPEOPERATION.TypOpeNumero, TBLTYPEOPERATION.TypOpeNom FROM TBLTYPEOPE"
+                        "RATION ORDER BY TBLTYPEOPERATION.TypOpeNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Fraude Type Operation"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =5385
+                            Top =7500
+                            Width =1425
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeTypOpeNumero"
+                            Caption ="Type d'opération:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =6246
+                    Top =7980
+                    Width =2256
+                    ColumnWidth =2280
+                    TabIndex =54
+                    Name ="CmbDecFraudeTypFrdNumero"
+                    ControlSource ="DecFraudeTypFrdNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLTYPEFRAUDE.TypFrdNumero, TBLTYPEFRAUDE.TypFrdNom FROM TBLTYPEFRAUDE OR"
+                        "DER BY TBLTYPEFRAUDE.TypFrdNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Fraude Type"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =7980
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeTypFrdNumero"
+                            Caption ="Type de fraude:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =840
+                    Top =8220
+                    Width =1716
+                    ColumnWidth =1185
+                    TabIndex =55
+                    Name ="CmbDecFraudeSouIPNumero"
+                    ControlSource ="DecFraudeSouIPNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLSOURCEIP.SouIPNumero, TBLSOURCEIP.SouIPNom FROM TBLSOURCEIP ORDER BY T"
+                        "BLSOURCEIP.SouIPNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Fraude Source IP"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =8220
+                            Width =840
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeSouIPNumero"
+                            Caption ="Source IP:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =8220
+                    Width =1116
+                    ColumnWidth =2235
+                    TabIndex =56
+                    Name ="TxtDecFraudeAdresseIP"
+                    ControlSource ="DecFraudeAdresseIP"
+                    StatusBarText ="Fraude Adresse IP"
+                    InputMask ="000\\.000\\.000\\.000"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =8220
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeAdresseIP"
+                            Caption ="Adresse IP:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =8460
+                    Width =846
+                    TabIndex =57
+                    Name ="TxtDecFraudeDecaissementDate"
+                    ControlSource ="DecFraudeDecaissementDate"
+                    Format ="Short Date"
+                    StatusBarText ="Fraude Decaissement Date"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =8460
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeDecaissementDate"
+                            Caption ="Date de décaissement:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4386
+                    Top =8460
+                    Width =846
+                    TabIndex =58
+                    Name ="TxtDecFraudeDecaissementHeure"
+                    ControlSource ="DecFraudeDecaissementHeure"
+                    Format ="Long Time"
+                    StatusBarText ="Fraude Decaissement Heure"
+                    InputMask ="00:00;0;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =2685
+                            Top =8460
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeDecaissementHeure"
+                            Caption ="Heure de décaissement:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =7365
+                    Top =8460
+                    Width =1146
+                    TabIndex =59
+                    Name ="TxtDecFraudeDecaissementMontant"
+                    ControlSource ="DecFraudeDecaissementMontant"
+                    Format ="#,##0.00 €;-#,##0.00 €"
+                    StatusBarText ="Fraude Decaissement Montant"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =5385
+                            Top =8460
+                            Width =1980
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeDecaissementMontant"
+                            Caption ="Montant du décaissement:"
+                        End
+                    End
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =8700
+                    Width =2535
+                    Height =315
+                    Name ="EtiDepotPlainteClient"
+                    Caption ="Dépôt de plainte client"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =9495
+                    Width =561
+                    TabIndex =60
+                    Name ="TxtDecDepotPlainteClientAccepter"
+                    ControlSource ="=IIf([DecDepotPlainteClientAccepter],\"Oui\",\"Non\")"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =9495
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteClientAccepter"
+                            Caption ="Accepter:"
+                        End
+                    End
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =9735
+                    Width =2535
+                    Height =315
+                    Name ="EtiDepotPlainteEntite"
+                    Caption ="Dépôt de plainte entité"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1695
+                    Top =10530
+                    Width =576
+                    TabIndex =61
+                    Name ="TxtDecDepotPlainteEntiteAccepter"
+                    ControlSource ="=IIf([DecDepotPlainteEntiteAccepter],\"Oui\",\"Non\")"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =10530
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecDepotPlainteEntiteAccepter"
+                            Caption ="Accepter:"
+                        End
+                    End
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =10770
+                    Width =2535
+                    Height =315
+                    Name ="EtiInformationSiteIllicite"
+                    Caption ="Information site illicite"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =11085
+                    Width =846
+                    TabIndex =62
+                    Name ="TxtDecSiteIlliciteDate"
+                    ControlSource ="DecSiteIlliciteDate"
+                    Format ="Short Date"
+                    StatusBarText ="Site Illicite Date"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =11085
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteDate"
+                            Caption ="Date de détéction:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =6246
+                    Top =11085
+                    Width =1671
+                    TabIndex =63
+                    Name ="CmbDecSiteIlliciteStaSitNumero"
+                    ControlSource ="DecSiteIlliciteStaSitNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLSTATUTSITE.StaSitNumero, TBLSTATUTSITE.StaSitNom FROM TBLSTATUTSITE OR"
+                        "DER BY TBLSTATUTSITE.StaSitNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Site Illicite Statut"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =11085
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteStaSitNumero"
+                            Caption ="Statut du site:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1695
+                    Top =11325
+                    Width =1716
+                    TabIndex =64
+                    Name ="CmbDecSiteIlliciteSouSitNumero"
+                    ControlSource ="DecSiteIlliciteSouSitNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLSOURCESITE.SouSitNumero, TBLSOURCESITE.SouSitNom FROM TBLSOURCESITE OR"
+                        "DER BY TBLSOURCESITE.SouSitNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Site Illicite Source"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =11325
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteSouSitNumero"
+                            Caption ="Source de détéction:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =5676
+                    Top =11325
+                    Width =2826
+                    TabIndex =65
+                    Name ="TxtDecSiteIlliciteURLAdresse"
+                    ControlSource ="DecSiteIlliciteURLAdresse"
+                    StatusBarText ="Site Illicite URL Adresse"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =11325
+                            Width =1140
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteURLAdresse"
+                            Caption ="Adresse URL:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1701
+                    Top =11565
+                    TabIndex =66
+                    Name ="CmbDecSiteIlliciteLocSitNumero"
+                    ControlSource ="DecSiteIlliciteLocSitNumero"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLLOCALISATIONSITE.LocSitNumero, TBLLOCALISATIONSITE.LocSitNom FROM TBLL"
+                        "OCALISATIONSITE ORDER BY TBLLOCALISATIONSITE.LocSitNom; "
+                    ColumnWidths ="0;2268"
+                    StatusBarText ="Site Illicite Localisation"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =11565
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteLocSitNumero"
+                            Caption ="Localisation:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =5676
+                    Top =11565
+                    Width =2826
+                    Height =660
+                    TabIndex =67
+                    Name ="TxtDecSiteIlliciteHebergeurAdresseCodePostalVillePays"
+                    ControlSource ="=[DecSiteIlliciteHebergeur] & chr(13) & chr(10) & [DecSiteIlliciteHebergeurAdres"
+                        "se] & chr(13) & chr(10) & [DecSiteIlliciteHebergeurCodePostal] & \" \" & [DecSit"
+                        "eIlliciteHebergeurVille] & \" \" & [DecSiteIlliciteHebergeurPays]"
+                    StatusBarText ="Site Illicite Hebergeur"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Left =4530
+                            Top =11565
+                            Width =1140
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteHebergeurAdresseCodePostalVillePays"
+                            Caption ="Hebergeur:"
+                        End
+                    End
+                End
+                Begin Label
+                    FontUnderline = NotDefault
+                    Top =12675
+                    Width =2580
+                    Height =315
+                    Name ="Étiquette172"
+                    Caption ="Liaison IGA/SF"
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =12225
+                    Width =6801
+                    Height =450
+                    TabIndex =68
+                    Name ="TxtDecSiteIlliciteSuivi"
+                    ControlSource ="DecSiteIlliciteSuivi"
+                    StatusBarText ="Site Illicite Suivi"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =12225
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecSiteIlliciteSuivi"
+                            Caption ="Suivi actions:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1701
+                    Top =6240
+                    TabIndex =69
+                    Name ="DecBeneficiaireBanque"
+                    ControlSource ="DecBeneficiaireBanque"
+                    StatusBarText ="Beneficiaire Banque"
+                    Begin
+                        Begin Label
+                            TextAlign =0
+                            Top =6240
+                            Width =1695
+                            Height =240
+                            FontSize =8
+                            Name ="Étiquette174"
+                            Caption ="Banque du bénéficiaire:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6240
+                    Top =7740
+                    Width =1125
+                    TabIndex =70
+                    Name ="TxtDecFraudeMontantRecuperer"
+                    ControlSource ="DecFraudeMontantRecuperer"
+                    Format ="#,##0.00 €;-#,##0.00 €"
+                    StatusBarText ="Fraude Montant"
+                    Begin
+                        Begin Label
+                            Left =4530
+                            Top =7740
+                            Width =1710
+                            Height =240
+                            FontSize =8
+                            Name ="EtiDecFraudeMontantRecuperer"
+                            Caption ="Montant récuperer:"
+                        End
+                    End
+                End
+            End
+        End
+        Begin PageFooter
+            Height =0
+            Name ="ZonePiedPage"
+        End
+    End
+End
+CodeBehindForm
+' See "EtaDeclaration.cls"

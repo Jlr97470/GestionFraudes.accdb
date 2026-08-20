@@ -1,0 +1,260 @@
+﻿-------------------------------------
+Beginning Export of Source Files
+GestionFraudes.accdb
+VCS Version 5.0.1
+Export Format: 4.1.2
+Full Path: D:\MES_SOURCES\ACCESS\SOURCES\DELTAINFORMATIQUE\ACCESS_2007-2016\CA\BASES\GestionFraudes.accdb
+Export Folder: D:\MES_SOURCES\GITHUB\GestionFraudes.accdb\
+20/08/2026 10:46:44
+Performing Full Export
+Updated VCS (4.1.2 -> 5.0.1)
+Note: Export format 5.0.0 is available (currently using 4.1.2). Update via Options > Export when ready.
+-------------------------------------
+Scanning source files...
+No db connections found in this database.
+No vbe forms found in this database.
+No saved specs found in this database.
+No shared images found in this database.
+No imex specs found in this database.
+No table data found in this database.
+No table data macros found in this database.
+No hidden attributes found in this database.
+-------------------------------------
+Exporting project...            GestionFraudes.accdb
+[1]
+-------------------------------------
+Exporting vb project...         Gestion Fraudes
+[1]
+-------------------------------------
+Exporting vbe references...     stdole
+[5]
+-------------------------------------
+Exporting proj properties...    Current Project Properties (Access)
+[1]
+-------------------------------------
+Exporting modules...            ModFonction
+  ModFormulaire
+[2]
+-------------------------------------
+Exporting commandbars...        MenuGestionFraudes
+  BarreGestionFraudes
+  EditionGestionFraudes
+[3]
+-------------------------------------
+Exporting themes...             Thème Office
+[1]
+-------------------------------------
+Exporting db properties...      Database Properties (DAO)
+[60]
+-------------------------------------
+Exporting tables...             TBLAUTORITE
+    Sanitized in 0,001 seconds.
+  TBLAUTORITE (SQL)
+  TBLDECLARATION
+    Sanitized in 0,006 seconds.
+  TBLDECLARATION (SQL)
+  TBLENTITE
+    Sanitized in 0,001 seconds.
+  TBLENTITE (SQL)
+  TBLLOCALISATIONSITE
+    Sanitized in 0,000 seconds.
+  TBLLOCALISATIONSITE (SQL)
+  TBLMARCHE
+    Sanitized in 0,000 seconds.
+  TBLMARCHE (SQL)
+  TBLMENU
+    Sanitized in 0,000 seconds.
+  TBLMENU (SQL)
+  TBLPARAMETRE
+    Sanitized in 0,001 seconds.
+  TBLPARAMETRE (SQL)
+  TBLSOURCEIP
+    Sanitized in 0,000 seconds.
+  TBLSOURCEIP (SQL)
+  TBLSOURCESITE
+    Sanitized in 0,000 seconds.
+  TBLSOURCESITE (SQL)
+  TBLSTATUTSITE
+    Sanitized in 0,000 seconds.
+  TBLSTATUTSITE (SQL)
+  TBLTYPEBENEFICIAIRE
+    Sanitized in 0,000 seconds.
+  TBLTYPEBENEFICIAIRE (SQL)
+  TBLTYPECOMPTE
+    Sanitized in 0,000 seconds.
+  TBLTYPECOMPTE (SQL)
+  TBLTYPEDECLARATION
+    Sanitized in 0,000 seconds.
+  TBLTYPEDECLARATION (SQL)
+  TBLTYPEFRAUDE
+    Sanitized in 0,000 seconds.
+  TBLTYPEFRAUDE (SQL)
+  TBLTYPEOPERATION
+    Sanitized in 0,000 seconds.
+  TBLTYPEOPERATION (SQL)
+[15]
+-------------------------------------
+Exporting queries...            AjoLstDec
+    Sanitized in 0,001 seconds.
+  AjoLstDec (SQL)
+  AnaEntiteNbDeclarationType
+    Sanitized in 0,001 seconds.
+  AnaEntiteNbDeclarationType (SQL)
+  AnaNbDeclarationType
+    Sanitized in 0,001 seconds.
+  AnaNbDeclarationType (SQL)
+  SelDeclaration
+    Sanitized in 0,004 seconds.
+  SelDeclaration (SQL)
+[4]
+-------------------------------------
+Exporting forms...              FrmListeLocalisationSite
+    Sanitized in 0,002 seconds.
+  FrmListeMarche
+    Sanitized in 0,002 seconds.
+  FrmAbout
+    Sanitized in 0,166 seconds.
+  FrmDeclaration
+    Sanitized in 0,025 seconds.
+  FrmListeSourceIP
+    Sanitized in 0,002 seconds.
+  FrmListeSourceSite
+    Sanitized in 0,002 seconds.
+  FrmConsultationCritere
+    Sanitized in 0,004 seconds.
+  FrmListeAutorite
+    Sanitized in 0,002 seconds.
+  FrmListeTypeDeclaration
+    Sanitized in 0,002 seconds.
+  FrmListeEntite
+    Sanitized in 0,002 seconds.
+  FrmConsultationEntite
+    Sanitized in 0,002 seconds.
+  FrmListeTypeCompte
+    Sanitized in 0,002 seconds.
+  FrmTableauBordStatistiqueAveree
+    Sanitized in 0,001 seconds.
+  FrmMenuPrincipal
+    Sanitized in 0,002 seconds.
+  FrmMenuListe
+    Sanitized in 0,002 seconds.
+  FrmDeclarationRecherche
+    Sanitized in 0,003 seconds.
+  FrmDeclarationAccuse
+    Sanitized in 0,001 seconds.
+  FrmListeTypeBeneficiaire
+    Sanitized in 0,002 seconds.
+  FrmListeTypeFraude
+    Sanitized in 0,002 seconds.
+  FrmListeTypeOperation
+    Sanitized in 0,002 seconds.
+  FrmListeStatutSite
+    Sanitized in 0,002 seconds.
+  FrmTableauBordStatistiqueConsolidee
+    Sanitized in 0,001 seconds.
+[22]
+-------------------------------------
+Exporting macros...             MacMenuPrincipal
+    Sanitized in 0,001 seconds.
+[1]
+-------------------------------------
+Exporting reports...            EtaDeclaration
+    Sanitized in 0,014 seconds.
+[1]
+-------------------------------------
+Exporting relations...          TBLMARCHETBLDECLARATION
+  TBLMODEOPERATOIRETBLDECLARATION
+  TBLSOURCESITETBLDECLARATION
+  TBLSTATUTSITETBLDECLARATION
+  TBLTYPEBENEFICIAIRETBLDECLARATION
+  TBLTYPECOMPTETBLDECLARATION
+  TBLTYPEDECLARATIONTBLDECLARATION
+  TBLTYPEOPERATIONTBLDECLARATION
+[8]
+-------------------------------------
+Exporting doc properties...     Database Documents
+[5]
+-------------------------------------
+Exporting nav pane groups...    Groups
+[1]
+-------------------------------------
+Done. (2,18 seconds)
+--------------------------------------------------
+                PERFORMANCE REPORTS
+--------------------------------------------------
+Category                      Count     Seconds
+--------------------------------------------------
+Forms                         22        1,27
+CommandBars                   3         0,23
+Tables                        15        0,17
+Queries                       4         0,11
+Reports                       1         0,05
+Relations                     8         0,04
+DB Properties                 60        0,04
+Modules                       2         0,03
+Doc Properties                5         0,03
+Nav Pane Groups               1         0,02
+Project                       1         0,02
+Themes                        1         0,02
+Macros                        1         0,02
+VBE References                5         0,02
+VB Project                    1         0,02
+Proj Properties               1         0,01
+Table Data Macros             0         0,00
+DB Connections                0         0,00
+Shared Images                 0         0,00
+Hidden Attributes             0         0,00
+IMEX Specs                    0         0,00
+Table Data                    0         0,00
+VBE Forms                     0         0,00
+Saved Specs                   0         0,00
+--------------------------------------------------
+TOTALS:                       131       2,11
+--------------------------------------------------
+
+--------------------------------------------------
+Operations                    Count     Seconds
+--------------------------------------------------
+App.SaveAsText()              28        0,30
+Sanitize File                 28        0,28
+Console Updates               20        0,21
+Convert to JSON               75        0,15
+Read File DevMode             23        0,09
+Save CommandBar Images        3         0,08
+Write File                    127       0,06
+Read File                     45        0,06
+App.ExportXML()               15        0,06
+Format SQL                    4         0,04
+Read File Bytes               50        0,03
+Save Table SQL                15        0,03
+Scan DB Objects               1         0,02
+Verify Path                   174       0,02
+Compute SHA256                193       0,01
+Get File Property Hash        64        0,01
+Increment Progress            2         0,01
+Delete File                   46        0,01
+Get Modified Date             134       0,01
+Sanitize XML                  15        0,01
+Get VBA Hash                  25        0,00
+Get @Folder Annotation        25        0,00
+Export VBE Module             2         0,00
+Format XML                    14        0,00
+Sanitize VBA Code             25        0,00
+Format XML (alt)              1         0,00
+Check for linked table        15        0,00
+Save Query SQL                4         0,00
+Export Theme                  1         0,00
+Cache Back-End Connections    1         0,00
+Quick Count Objects           1         0,00
+Scan Folder Contents (API)    3         0,00
+Quick Count Files             1         0,00
+Close Open Objects            1         0,00
+File Pattern Exists (API)     10        0,00
+Clear Files by Ext            6         0,00
+modFileAccess.GetUncPath      1         0,00
+--------------------------------------------------
+Other Operations                        0,63
+TOTAL RUNTIME:                          2,18
+--------------------------------------------------
+
+

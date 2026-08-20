@@ -1,0 +1,244 @@
+﻿{
+  "Info": {
+    "Class": "clsDbProperty",
+    "Description": "Database Properties (DAO)"
+  },
+  "Items": {
+    "AccessVersion": {
+      "Value": "09.50",
+      "Type": 10
+    },
+    "AllowBuiltInToolbars": {
+      "Value": false,
+      "Type": 1
+    },
+    "AllowDatasheetSchema": {
+      "Value": true,
+      "Type": 1
+    },
+    "AllowFullMenus": {
+      "Value": false,
+      "Type": 1
+    },
+    "AllowShortcutMenus": {
+      "Value": false,
+      "Type": 1
+    },
+    "AllowSpecialKeys": {
+      "Value": true,
+      "Type": 1
+    },
+    "AllowToolbarChanges": {
+      "Value": true,
+      "Type": 1
+    },
+    "ANSI Query Mode": {
+      "Value": 0,
+      "Type": 4
+    },
+    "AppTitle": {
+      "Value": "Application gestion et suivi des fraudes",
+      "Type": 10
+    },
+    "Auto Compact": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Build": {
+      "Value": 126,
+      "Type": 4
+    },
+    "CollatingOrder": {
+      "Value": 1036,
+      "Type": 3
+    },
+    "Connect": {
+      "Value": "",
+      "Type": 12
+    },
+    "Continuous Form Record Navigation Keys": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Default Zoom Level": {
+      "Value": 100,
+      "Type": 4
+    },
+    "DesignMasterID": {
+      "Value": "",
+      "Type": 15
+    },
+    "DesignWithData": {
+      "Value": true,
+      "Type": 1
+    },
+    "Disable Zoom": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Four-Digit Year Formatting": {
+      "Value": 1,
+      "Type": 4
+    },
+    "HasOfflineLists": {
+      "Value": 70,
+      "Type": 3
+    },
+    "Log Name AutoCorrect Changes": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Name": {
+      "Value": "rel:GestionFraudes.accdb",
+      "Type": 12
+    },
+    "NavPane Category": {
+      "Value": 0,
+      "Type": 4
+    },
+    "NavPane Closed": {
+      "Value": 0,
+      "Type": 4
+    },
+    "NavPane Sort By": {
+      "Value": 1,
+      "Type": 4
+    },
+    "NavPane View By": {
+      "Value": 2,
+      "Type": 4
+    },
+    "NavPane Width": {
+      "Value": 471,
+      "Type": 4
+    },
+    "Option to enable Monaco SQL Editor": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Perform Name AutoCorrect": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Picture Property Storage Format": {
+      "Value": 1,
+      "Type": 4
+    },
+    "ProjVer": {
+      "Value": 142,
+      "Type": 3
+    },
+    "QueryTimeout": {
+      "Value": 60,
+      "Type": 3
+    },
+    "RecordsAffected": {
+      "Value": 0,
+      "Type": 4
+    },
+    "ReplicaID": {
+      "Value": "",
+      "Type": 15
+    },
+    "Row Limit": {
+      "Value": 10000,
+      "Type": 4
+    },
+    "Show Navigation Pane Search Bar": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Show Values in Indexed": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Show Values in Non-Indexed": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Show Values in Remote": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Show Values in Server": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Show Values in Snapshot": {
+      "Value": 1,
+      "Type": 4
+    },
+    "Show Values Limit": {
+      "Value": 1000,
+      "Type": 4
+    },
+    "ShowDocumentTabs": {
+      "Value": true,
+      "Type": 1
+    },
+    "StartUpForm": {
+      "Value": "FrmAbout",
+      "Type": 10
+    },
+    "StartUpMenuBar": {
+      "Value": "MenuGestionFraudes",
+      "Type": 10
+    },
+    "StartUpShowDBWindow": {
+      "Value": false,
+      "Type": 1
+    },
+    "StartUpShowStatusBar": {
+      "Value": true,
+      "Type": 1
+    },
+    "Theme Resource Name": {
+      "Value": "Thème Office",
+      "Type": 10
+    },
+    "Track Name AutoCorrect Info": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Transactions": {
+      "Value": true,
+      "Type": 1
+    },
+    "Updatable": {
+      "Value": true,
+      "Type": 1
+    },
+    "Use BigInt for linking and importing data": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Use DateTime2 for linking and importing data": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Use Default Connection File": {
+      "Value": 0,
+      "Type": 4
+    },
+    "Use Default Page Folder": {
+      "Value": 0,
+      "Type": 4
+    },
+    "UseAppIconForFrmRpt": {
+      "Value": false,
+      "Type": 1
+    },
+    "UseMDIMode": {
+      "Value": 1,
+      "Type": 2
+    },
+    "Version": {
+      "Value": "12.0",
+      "Type": 12
+    },
+    "WebDesignMode": {
+      "Value": 0,
+      "Type": 2
+    }
+  }
+}

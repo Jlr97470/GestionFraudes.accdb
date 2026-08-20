@@ -1,0 +1,130 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    PopUp = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =0
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =5669
+    DatasheetFontHeight =10
+    ItemSuffix =4
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0x3fc2cdd8f2e1e240
+    End
+    Caption ="Statistiques consolidées"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin Section
+            Height =2265
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin TextBox
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =2265
+                    Top =285
+                    Name ="TxtDateDebut"
+                    DefaultValue ="\"01/01/\" & Year(Date())"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =570
+                            Top =285
+                            Width =1695
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDateDebut"
+                            Caption ="Date de début:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =2265
+                    Top =855
+                    TabIndex =1
+                    Name ="TxtDateFin"
+                    DefaultValue ="\"31/12/\" & Year(Date())"
+                    InputMask ="00/00/0000;0;_"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =570
+                            Top =855
+                            Width =1680
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiDateFin"
+                            Caption ="Date de fin:"
+                        End
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3975
+                    Top =1695
+                    Width =1215
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =2
+                    Name ="CmdExporter"
+                    Caption ="EXPORTER"
+                    OnClick ="[Event Procedure]"
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmTableauBordStatistiqueConsolidee.cls"

@@ -1,0 +1,368 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    AllowFilters = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =62
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =15300
+    DatasheetFontHeight =10
+    ItemSuffix =33
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0x7277888292dee240
+    End
+    Caption ="Recherche d'une déclaration"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnActivate ="[Event Procedure]"
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin ListBox
+            SpecialEffect =2
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =9075
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin ListBox
+                    ColumnHeads = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ColumnCount =7
+                    Top =1980
+                    Width =15285
+                    Height =6240
+                    TabIndex =9
+                    BoundColumn =-1
+                    Name ="LstDeclarationRecherche"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT DecDeclarantEntNom, DecNumero, DecDate, DecDateCreation, DecDeclarantNom,"
+                        " DecDeclarantPrenom, DecVictimeNom, DecVictimePrenom FROM SelDeclaration ORDER B"
+                        "Y DecDeclarantEntNom, DecNumero; "
+                    OnDblClick ="[Event Procedure]"
+                End
+                Begin ComboBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    RowSourceTypeInt =1
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =3
+                    Left =1140
+                    Top =720
+                    Width =3411
+                    Name ="CmbCritere1"
+                    RowSourceType ="Value List"
+                    ColumnWidths ="0;2268;0"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =1140
+                            Top =435
+                            Width =3390
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere1"
+                            Caption ="Critére 1:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    RowSourceTypeInt =1
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =3
+                    Left =7665
+                    Top =720
+                    Width =3396
+                    TabIndex =2
+                    Name ="CmbCritere2"
+                    RowSourceType ="Value List"
+                    ColumnWidths ="0;2268;0"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =7665
+                            Top =435
+                            Width =3390
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere2"
+                            Caption ="Critére 2:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    RowSourceTypeInt =1
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =3
+                    Left =1140
+                    Top =1290
+                    Width =3411
+                    TabIndex =4
+                    Name ="CmbCritere3"
+                    RowSourceType ="Value List"
+                    ColumnWidths ="0;2268;0"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =1140
+                            Top =1005
+                            Width =3390
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere3"
+                            Caption ="Critére 3:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    RowSourceTypeInt =1
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =3
+                    Left =7680
+                    Top =1290
+                    Width =3381
+                    TabIndex =6
+                    Name ="CmbCritere4"
+                    RowSourceType ="Value List"
+                    ColumnWidths ="0;2268;0"
+                    AfterUpdate ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =7665
+                            Top =1005
+                            Width =3390
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere4"
+                            Caption ="Critére 4:"
+                        End
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =14175
+                    Top =8505
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =10
+                    Name ="CmdQuitter"
+                    Caption ="QUITTER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin Label
+                    OverlapFlags =87
+                    Left =135
+                    Top =150
+                    Width =1695
+                    Height =285
+                    FontSize =10
+                    FontWeight =700
+                    Name ="EtiDeclarationRecherche"
+                    Caption ="Recherche par :"
+                End
+                Begin CommandButton
+                    Default = NotDefault
+                    OverlapFlags =85
+                    Left =14175
+                    Top =1155
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =8
+                    Name ="CmdValider"
+                    Caption ="VALIDER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin ComboBox
+                    OldBorderStyle =0
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =4830
+                    Top =1290
+                    Width =2556
+                    TabIndex =5
+                    Name ="CmbCritere3Valeur"
+                    RowSourceType ="Table/Query"
+                    ColumnWidths ="2268"
+                    OnChange ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =4830
+                            Top =1005
+                            Width =2535
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere3Valeur"
+                            Caption ="Valeur:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    OldBorderStyle =0
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =11340
+                    Top =1290
+                    Width =2556
+                    TabIndex =7
+                    Name ="CmbCritere4Valeur"
+                    RowSourceType ="Table/Query"
+                    ColumnWidths ="2268"
+                    OnChange ="[Event Procedure]"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =11340
+                            Top =1005
+                            Width =2550
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere4Valeur"
+                            Caption ="Valeur:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    OldBorderStyle =0
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =4830
+                    Top =720
+                    Width =2556
+                    TabIndex =1
+                    Name ="CmbCritere1Valeur"
+                    RowSourceType ="Table/Query"
+                    ColumnWidths ="2268"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =4830
+                            Top =435
+                            Width =2535
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere1Valeur"
+                            Caption ="Valeur:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    RowSourceTypeInt =1
+                    OldBorderStyle =0
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    Left =11340
+                    Top =720
+                    Width =2556
+                    TabIndex =3
+                    Name ="CmbCritere2Valeur"
+                    RowSourceType ="Value List"
+                    ColumnWidths ="2268"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =11340
+                            Top =435
+                            Width =2550
+                            Height =285
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiCritere2Valeur"
+                            Caption ="Valeur:"
+                        End
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =1140
+                    Top =1635
+                    Width =6330
+                    Height =285
+                    FontSize =10
+                    FontWeight =700
+                    Name ="EtiEnCas"
+                    Caption ="*En cas de recherche multi-critéres les criteres sont combinés."
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmDeclarationRecherche.cls"

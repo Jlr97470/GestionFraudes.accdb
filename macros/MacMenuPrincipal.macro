@@ -1,0 +1,83 @@
+﻿Version =196611
+ColumnsShown =3
+Begin
+    MacroName ="OuvreFrmMenuPrincipal"
+    Action ="OpenForm"
+    Argument ="FrmMenuPrincipal"
+    Argument ="0"
+    Argument =""
+    Argument =""
+    Argument ="1"
+    Argument ="0"
+End
+Begin
+    MacroName ="OuvreFrmDeclaration"
+    Action ="RunCode"
+    Argument ="OuvreFrmDeclaration (1, \"Enregistrement d'une déclaration\") "
+End
+Begin
+    MacroName ="OuvreFrmDeclarationRecherche"
+    Action ="RunCode"
+    Argument ="OuvreFrmDeclarationRecherche (\"Mise a  jour d'une déclaration enregistrée\") "
+End
+Begin
+    MacroName ="OuvreFrmDeclarationAccuse"
+    Action ="RunCode"
+    Argument ="OuvreFrmDeclarationAccuse (\"Formatage du texte type de l'accusé de recéception\""
+        ") "
+End
+Begin
+    MacroName ="OuvreFrmConsultationEntite"
+    Action ="OpenForm"
+    Argument ="FrmConsultationEntite"
+    Argument ="0"
+    Argument =""
+    Argument =""
+    Argument ="1"
+    Argument ="0"
+End
+Begin
+    MacroName ="OuvreFrmConsultationCritere"
+    Action ="OpenForm"
+    Argument ="FrmConsultationCritere"
+    Argument ="0"
+    Argument =""
+    Argument =""
+    Argument ="1"
+    Argument ="0"
+End
+Begin
+    MacroName ="CreeExcelRepartitionEntite"
+    Action ="RunCode"
+    Argument ="CreeExcelRepartitionEntite () "
+End
+Begin
+    MacroName ="OuvreFrmTableauBordStatistiqueConsolidee"
+    Action ="OpenForm"
+    Argument ="FrmTableauBordStatistiqueConsolidee"
+    Argument ="0"
+    Argument =""
+    Argument =""
+    Argument ="1"
+    Argument ="0"
+End
+Begin
+    MacroName ="OuvreFrmTableauBordStatistiqueAveree"
+    Action ="OpenForm"
+    Argument ="FrmTableauBordStatistiqueAveree"
+    Argument ="0"
+    Argument =""
+    Argument =""
+    Argument ="1"
+    Argument ="0"
+End
+Begin
+    MacroName ="OuvreFrmMenuListe"
+    Action ="RunCode"
+    Argument ="OuvreFrmMenuListe (\"Mise a jour des listes deroulante\") "
+End
+Begin
+    MacroName ="FermeEtatActif"
+    Action ="RunCode"
+    Argument ="FermeEtatActif () "
+End

@@ -1,0 +1,126 @@
+﻿{
+  "Info": {
+    "Class": "clsDbCommandBar",
+    "Description": "CommandBar"
+  },
+  "Items": {
+    "AdaptiveMenu": false,
+    "Context": "",
+    "Enabled": true,
+    "NameLocal": "EditionGestionFraudes",
+    "Position": 5,
+    "Protection": 22,
+    "Type": 2,
+    "Controls": [
+      {
+        "FaceIdName": "Zoom",
+        "BeginGroup": false,
+        "BuiltIn": false,
+        "Caption": "&Zoom :",
+        "DescriptionText": "",
+        "Enabled": false,
+        "HelpContextId": 0,
+        "HelpFile": "",
+        "OLEUsage": 3,
+        "Parameter": "",
+        "Style": 0,
+        "Tag": "",
+        "TooltipText": "&Zoom :",
+        "Type": 4,
+        "Visible": true,
+        "List": [
+        ]
+      },
+      {
+        "ControlIdName": "Page Setup",
+        "BeginGroup": false,
+        "BuiltIn": true,
+        "Type": 1,
+        "Visible": true,
+        "Id": 247
+      },
+      {
+        "ControlIdName": "Print",
+        "BeginGroup": false,
+        "BuiltIn": true,
+        "Type": 1,
+        "Visible": true,
+        "Id": 2521
+      },
+      {
+        "ControlIdName": "Export",
+        "BeginGroup": false,
+        "BuiltIn": true,
+        "Type": 1,
+        "Visible": true,
+        "Id": 2938
+      },
+      {
+        "FaceIdName": "Office Links",
+        "BeginGroup": false,
+        "BuiltIn": false,
+        "Caption": "&Liaisons Office",
+        "DescriptionText": "",
+        "Enabled": true,
+        "HelpContextId": 0,
+        "HelpFile": "",
+        "OLEMenuGroup": -1,
+        "OLEUsage": 1,
+        "Parameter": "",
+        "Tag": "",
+        "TooltipText": "&Liaisons Office",
+        "Type": 14,
+        "Visible": true,
+        "Controls": [
+          {
+            "ControlIdName": "Word Merge",
+            "BeginGroup": false,
+            "BuiltIn": true,
+            "Type": 1,
+            "Visible": true,
+            "Id": 626
+          },
+          {
+            "ControlIdName": "Publish with Microsoft Word",
+            "BeginGroup": false,
+            "BuiltIn": true,
+            "Type": 1,
+            "Visible": true,
+            "Id": 567
+          },
+          {
+            "ControlIdName": "Analyze with Microsoft Excel",
+            "BeginGroup": false,
+            "BuiltIn": true,
+            "Type": 1,
+            "Visible": true,
+            "Id": 566
+          }
+        ]
+      },
+      {
+        "ControlIdName": "About",
+        "BeginGroup": false,
+        "BuiltIn": true,
+        "BuiltInFace": true,
+        "Caption": "&Quitter",
+        "DescriptionText": "Exécuter macro 'MacMenuPrincipal.FermeEtatActif'",
+        "Enabled": true,
+        "FaceId": 1839,
+        "HelpContextId": 0,
+        "HelpFile": "",
+        "HyperlinkType": 0,
+        "OLEUsage": 1,
+        "OnAction": "",
+        "Parameter": "MacMenuPrincipal.FermeEtatActif",
+        "ShortcutText": "",
+        "Style": 1,
+        "Tag": "",
+        "TooltipText": "Exécuter macro 'MacMenuPrincipal.FermeEtatActif'",
+        "Type": 1,
+        "Visible": true,
+        "Id": 1839
+      }
+    ]
+  }
+}

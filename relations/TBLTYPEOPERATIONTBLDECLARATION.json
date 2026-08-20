@@ -1,0 +1,18 @@
+﻿{
+  "Info": {
+    "Class": "clsDbRelation",
+    "Description": "Database relationship"
+  },
+  "Items": {
+    "Name": "TBLTYPEOPERATIONTBLDECLARATION",
+    "Attributes": 256,
+    "Table": "TBLTYPEOPERATION",
+    "ForeignTable": "TBLDECLARATION",
+    "Fields": [
+      {
+        "Name": "TypOpeNumero",
+        "ForeignName": "DecFraudeTypOpeNumero"
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    AllowFilters = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =0
+    BorderStyle =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =15321
+    DatasheetFontHeight =10
+    ItemSuffix =4
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    OnUnload ="[Event Procedure]"
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0x81228c1b33dfe240
+    End
+    Caption ="Accusé de récéption"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnActivate ="[Event Procedure]"
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =9075
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =15
+                    Top =1935
+                    Width =15306
+                    Height =6240
+                    ColumnWidth =1695
+                    TabIndex =1
+                    Name ="TxtAccuse"
+                    StatusBarText ="Parametre Valeur"
+                    OnExit ="[Event Procedure]"
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    RowSourceTypeInt =1
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =5100
+                    Top =570
+                    Width =3411
+                    Name ="CmbChamp"
+                    RowSourceType ="Value List"
+                    ColumnWidths ="0;2268"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =570
+                            Top =570
+                            Width =4530
+                            Height =255
+                            FontSize =10
+                            FontWeight =700
+                            Name ="EtiChamp"
+                            Caption ="Champs a integrer dans le corps du texte:"
+                        End
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =14175
+                    Top =8505
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =2
+                    Name ="CmdQuitter"
+                    Caption ="VALIDER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =9075
+                    Top =570
+                    Width =1020
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =3
+                    Name ="CmdInserer"
+                    Caption ="INSERER"
+                    OnClick ="[Event Procedure]"
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmDeclarationAccuse.cls"

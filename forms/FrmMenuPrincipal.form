@@ -1,0 +1,223 @@
+﻿Version =20
+VersionRequired =20
+Begin Form
+    PopUp = NotDefault
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    ShortcutMenu = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDeletions = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowAdditions = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =0
+    BorderStyle =3
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =11340
+    DatasheetFontHeight =10
+    ItemSuffix =8
+    Left =1000
+    Top =1000
+    Right =50000
+    Bottom =50000
+    DatasheetGridlinesColor =12632256
+    Toolbar ="BarreGestionFraudes"
+    RecSrcDt = Begin
+        0x77c52a01d8dde240
+    End
+    Caption ="Gestion Des Fraudes"
+    MenuBar ="MenuGestionFraudes"
+    DatasheetFontName ="Arial"
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =16
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin ListBox
+            SpecialEffect =2
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin Tab
+            Width =5103
+            Height =3402
+            FontName ="Tahoma"
+        End
+        Begin Page
+            Width =1701
+            Height =1701
+        End
+        Begin Section
+            Height =5670
+            BackColor =16628127
+            Name ="Détail"
+            Begin
+                Begin Tab
+                    OverlapFlags =93
+                    Left =375
+                    Top =855
+                    Width =10590
+                    Height =3675
+                    FontSize =10
+                    FontWeight =700
+                    Name ="CtbMenu"
+                    OnChange ="[Event Procedure]"
+                    Begin
+                        Begin Page
+                            OverlapFlags =223
+                            Left =510
+                            Top =1305
+                            Width =10320
+                            Height =3090
+                            Name ="PgeGestion"
+                            Caption ="Gestion des déclarations"
+                        End
+                        Begin Page
+                            OverlapFlags =223
+                            Left =510
+                            Top =1305
+                            Width =10320
+                            Height =3090
+                            Name ="PgeConsultation"
+                            Caption ="Consultation des déclarations"
+                        End
+                        Begin Page
+                            OverlapFlags =223
+                            Left =510
+                            Top =1305
+                            Width =10320
+                            Height =3090
+                            Name ="PgeRequetes"
+                            Caption ="Requêtes"
+                        End
+                        Begin Page
+                            OverlapFlags =223
+                            Left =510
+                            Top =1305
+                            Width =10320
+                            Height =3090
+                            Name ="PgeTableau"
+                            Caption ="Tableau de Bord"
+                        End
+                        Begin Page
+                            OverlapFlags =223
+                            Left =510
+                            Top =1305
+                            Width =10320
+                            Height =3090
+                            Name ="PgeUtilitaires"
+                            Caption ="Utilitaires"
+                        End
+                    End
+                End
+                Begin ListBox
+                    OverlapFlags =215
+                    IMESentenceMode =3
+                    ColumnCount =4
+                    Left =670
+                    Top =1402
+                    Width =10155
+                    Height =2913
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =1
+                    BoundColumn =-1
+                    Name ="LstMenu"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT TBLMENU.MenGroupe, TBLMENU.MenNumero, \"♦ - \" & TBLMENU.MenNom AS MenNom"
+                        ", TBLMENU.MenMacro FROM TBLMENU WHERE (((TBLMENU.MenGroupe)=Formulaires!FrmMenuP"
+                        "rincipal!TxtMenuGroupe)) ORDER BY TBLMENU.MenNumero; "
+                    ColumnWidths ="0;0;2268;0"
+                    OnDblClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =10110
+                    Top =5100
+                    Width =1110
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =2
+                    Name ="CmdQuitter"
+                    Caption ="QUITTER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =8505
+                    Top =5115
+                    Width =1140
+                    Height =450
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =3
+                    Name ="CmdValider"
+                    Caption ="VALIDER"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin TextBox
+                    Visible = NotDefault
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Width =21
+                    Height =0
+                    TabIndex =4
+                    Name ="TxtMenuGroupe"
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =570
+                    Width =7365
+                    Height =570
+                    FontSize =24
+                    Name ="EtiMenuGeneral"
+                    Caption ="MENU PRINCIPAL"
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =570
+                    Top =4815
+                    Width =4530
+                    Height =765
+                    Name ="EtiPoleSecurite"
+                    Caption ="POLE SECURITE MULTIMEDIA CREDIT AGRICOLE S.A"
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+' See "FrmMenuPrincipal.cls"

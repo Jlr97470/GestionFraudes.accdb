@@ -1,0 +1,34 @@
+﻿{
+  "Info": {
+    "Class": "clsDbDocument",
+    "Description": "Database Documents Properties (DAO)"
+  },
+  "Items": {
+    "Databases": {
+      "SummaryInfo": {
+        "Author": {
+          "Type": 10,
+          "Value": "Jean-Laurent ROYER"
+        },
+        "Company": {
+          "Type": 10,
+          "Value": "CREDIT AGRICOLE"
+        },
+        "Manager": {
+          "Type": 10,
+          "Value": "Jean Gerard CASET"
+        },
+        "Title": {
+          "Type": 10,
+          "Value": "Gestion Des Fraudes"
+        }
+      },
+      "UserDefined": {
+        "ReplicateProject": {
+          "Type": 1,
+          "Value": true
+        }
+      }
+    }
+  }
+}
