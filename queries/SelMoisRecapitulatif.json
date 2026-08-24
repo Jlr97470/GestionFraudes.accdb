@@ -1,0 +1,71 @@
+﻿{
+  "Info": {
+    "Class": "clsDbQuery",
+    "Description": "SelMoisRecapitulatif"
+  },
+  "Items": {
+    "QueryType": 0,
+    "QueryProperties": {
+      "NoFormat": {
+        "Type": 1,
+        "Value": false
+      }
+    },
+    "DesignLayout": {
+      "State": 0,
+      "Window": {
+        "left": -582,
+        "top": 59,
+        "right": 1485,
+        "bottom": 1178
+      },
+      "DesignerPane": {
+        "left": -1,
+        "top": -1,
+        "right": 2043,
+        "bottom": 737
+      },
+      "GridLeft": 0,
+      "GridTop": 0,
+      "ColumnsShown": 543,
+      "Tables": [
+        {
+          "Name": "TBLTYPEOPERATION",
+          "Alias": "",
+          "Left": 1124,
+          "Top": 424,
+          "Right": 1268,
+          "Bottom": 568,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEDECLARATION",
+          "Alias": "",
+          "Left": 1271,
+          "Top": 248,
+          "Right": 1415,
+          "Bottom": 392,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEFRAUDE",
+          "Alias": "",
+          "Left": 1217,
+          "Top": 529,
+          "Right": 1361,
+          "Bottom": 673,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLDECLARATION",
+          "Alias": "",
+          "Left": 272,
+          "Top": 118,
+          "Right": 979,
+          "Bottom": 840,
+          "ScrollTop": 0
+        }
+      ]
+    }
+  }
+}

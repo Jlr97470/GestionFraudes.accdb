@@ -1,0 +1,80 @@
+﻿{
+  "Info": {
+    "Class": "clsDbQuery",
+    "Description": "SelRecapitulatifDeclaration"
+  },
+  "Items": {
+    "QueryType": 0,
+    "QueryProperties": {
+      "NoFormat": {
+        "Type": 1,
+        "Value": false
+      }
+    },
+    "DesignLayout": {
+      "State": 0,
+      "Window": {
+        "left": -633,
+        "top": 117,
+        "right": 1434,
+        "bottom": 1235
+      },
+      "DesignerPane": {
+        "left": -1,
+        "top": -1,
+        "right": 2043,
+        "bottom": 703
+      },
+      "GridLeft": 0,
+      "GridTop": 0,
+      "ColumnsShown": 539,
+      "Tables": [
+        {
+          "Name": "TBLTYPEOPERATION",
+          "Alias": "",
+          "Left": 1080,
+          "Top": 455,
+          "Right": 1224,
+          "Bottom": 599,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEFRAUDE",
+          "Alias": "",
+          "Left": 1200,
+          "Top": 658,
+          "Right": 1344,
+          "Bottom": 802,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLDECLARATION",
+          "Alias": "",
+          "Left": 602,
+          "Top": 286,
+          "Right": 934,
+          "Bottom": 757,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLENTITE",
+          "Alias": "",
+          "Left": 1129,
+          "Top": 338,
+          "Right": 1273,
+          "Bottom": 482,
+          "ScrollTop": 0
+        },
+        {
+          "Name": "TBLTYPEDECLARATION",
+          "Alias": "",
+          "Left": 1345,
+          "Top": 556,
+          "Right": 1489,
+          "Bottom": 700,
+          "ScrollTop": 0
+        }
+      ]
+    }
+  }
+}

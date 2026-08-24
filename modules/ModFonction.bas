@@ -230,55 +230,63 @@ Public Function CreeExcelRepartitionEntite() As Boolean
 
    Set RsRepartitionDeclaration = CurrentDb.OpenRecordset("SelRepartitionDeclaration")
 
-   AppExcel.Visible = True
+   If RsEntiteRepartitionDeclaration.EOF = False Then
 
-   Set WkbClasseur = AppExcel.Workbooks.Open(CurrentProject.Path & "\ModeleRepartitionDeclaration.XLT")
+      RsEntiteRepartitionDeclaration.MoveLast
 
-   Set WksFeuille = WkbClasseur.Worksheets("Repartition")
+      RsEntiteRepartitionDeclaration.MoveFirst
 
-   With WksFeuille
+      AppExcel.Visible = True
 
-      .Cells(1, 7) = Date
+      Set WkbClasseur = AppExcel.Workbooks.Open(CurrentProject.Path & "\ModeleRepartitionDeclaration.XLT")
 
-      .Cells(7, 1).CopyFromRecordset RsEntiteRepartitionDeclaration
+      Set WksFeuille = WkbClasseur.Worksheets("Repartition")
 
-      .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1).CopyFromRecordset RsRepartitionDeclaration
+      With WksFeuille
 
-      .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders.LineStyle = 1
+         .Cells(1, 7) = Date
 
-      .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(8).Weight = 3
+         .Cells(7, 1).CopyFromRecordset RsEntiteRepartitionDeclaration
 
-      .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(9).Weight = 3
+         .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1).CopyFromRecordset RsRepartitionDeclaration
 
-      .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(7).Weight = 3
+         .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders.LineStyle = 1
 
-      .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(10).Weight = 3
+         .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(8).Weight = 3
 
-      .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders.LineStyle = 1
+         .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(9).Weight = 3
 
-      .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(8).Weight = 3
+         .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(7).Weight = 3
 
-      .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(9).Weight = 3
+         .Range(.Cells(7, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount - 1, 10)).Borders(10).Weight = 3
 
-      .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(7).Weight = 3
+         .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders.LineStyle = 1
 
-      .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(10).Weight = 3
+         .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(8).Weight = 3
 
-      .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Interior.Color = 12632256
+         .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(9).Weight = 3
 
-   End With
+         .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(7).Weight = 3
 
-   Set ChtGraphique = WkbClasseur.Charts("Graphique Préjudice Net")
+         .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Borders(10).Weight = 3
 
-   ChtGraphique.SeriesCollection(1).FormulaLocal = "=SERIE(" & Chr(34) & "Préjudice Net" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$F$7:$F$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";1)"
+         .Range(.Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 1), .Cells(7 + RsEntiteRepartitionDeclaration.RecordCount, 10)).Interior.Color = 12632256
 
-   ChtGraphique.SeriesCollection(2).FormulaLocal = "=SERIE(" & Chr(34) & "Nombre de fraudes" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$B$7:$B$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";2)"
+      End With
 
-   Set ChtGraphique = WkbClasseur.Charts("Graphique Risque Global")
+      Set ChtGraphique = WkbClasseur.Charts("Graphique Préjudice Net")
 
-   ChtGraphique.SeriesCollection(1).FormulaLocal = "=SERIE(" & Chr(34) & "Nombre de fraudes" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$K$7:$K$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";1)"
+      ChtGraphique.SeriesCollection(1).FormulaLocal = "=SERIE(" & Chr(34) & "Préjudice Net" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$F$7:$F$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";1)"
 
-   ChtGraphique.SeriesCollection(2).FormulaLocal = "=SERIE(" & Chr(34) & "Montants des fraudes" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$I$7:$I$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";2)"
+      ChtGraphique.SeriesCollection(2).FormulaLocal = "=SERIE(" & Chr(34) & "Nombre de fraudes" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$B$7:$B$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";2)"
+
+      Set ChtGraphique = WkbClasseur.Charts("Graphique Risque Global")
+
+      ChtGraphique.SeriesCollection(1).FormulaLocal = "=SERIE(" & Chr(34) & "Nombre de fraudes" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$K$7:$K$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";1)"
+
+      ChtGraphique.SeriesCollection(2).FormulaLocal = "=SERIE(" & Chr(34) & "Montants des fraudes" & Chr(34) & ";Repartition!$A$7:$A$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";Repartition!$I$7:$I$" & (RsEntiteRepartitionDeclaration.RecordCount + 6) & ";2)"
+
+   End If
 
    RsEntiteRepartitionDeclaration.Close
 
@@ -488,7 +496,7 @@ Public Function CreeExcelRecapitulatifMois(ByVal IntType As Integer, ByVal DatDe
 
          RsRecapitulatifDeclaration.Filter = "MonthName(Month([DecFraudeDate])) & ' ' & Year([DecFraudeDate])='" & RsMoisRecapitulatif("FraudeMois") & "'"
 
-         Set RsRecapitulatifDeclarationMois = RsRecapitulatifDeclaration.OpenRecordset()
+         Set RsRecapitulatifDeclarationMois = RsRecapitulatifDeclaration
 
          .Cells(20, 1).CopyFromRecordset RsRecapitulatifDeclarationMois
 
