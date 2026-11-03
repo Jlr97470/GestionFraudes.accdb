@@ -1,2 +1,5 @@
 # Application pour de déclaration de fraude.
-Accass 2007-2016.
+
+Les deux modlées Excel doivent être placée a la racine de l'application.
+
+Access 2007-2016.
