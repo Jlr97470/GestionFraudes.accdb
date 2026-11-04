@@ -29,9 +29,9 @@
         "Id": 2521
       },
       {
-        "FaceIdName": "Office Links",
+        "ControlIdName": "Office Links",
         "BeginGroup": false,
-        "BuiltIn": false,
+        "BuiltIn": true,
         "Caption": "&Liaisons Office",
         "DescriptionText": "",
         "Enabled": true,
@@ -44,32 +44,7 @@
         "TooltipText": "&Liaisons Office",
         "Type": 14,
         "Visible": true,
-        "Controls": [
-          {
-            "ControlIdName": "Word Merge",
-            "BeginGroup": false,
-            "BuiltIn": true,
-            "Type": 1,
-            "Visible": true,
-            "Id": 626
-          },
-          {
-            "ControlIdName": "Publish with Microsoft Word",
-            "BeginGroup": false,
-            "BuiltIn": true,
-            "Type": 1,
-            "Visible": true,
-            "Id": 567
-          },
-          {
-            "ControlIdName": "Analyze with Microsoft Excel",
-            "BeginGroup": false,
-            "BuiltIn": true,
-            "Type": 1,
-            "Visible": true,
-            "Id": 566
-          }
-        ]
+        "Id": 2598
       }
     ]
   }

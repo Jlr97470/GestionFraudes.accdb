@@ -13,9 +13,9 @@
     "Type": 2,
     "Controls": [
       {
-        "FaceIdName": "Zoom",
+        "ControlIdName": "Zoom",
         "BeginGroup": false,
-        "BuiltIn": false,
+        "BuiltIn": true,
         "Caption": "&Zoom :",
         "DescriptionText": "",
         "Enabled": false,
@@ -28,8 +28,7 @@
         "TooltipText": "&Zoom :",
         "Type": 4,
         "Visible": true,
-        "List": [
-        ]
+        "Id": 1733
       },
       {
         "ControlIdName": "Page Setup",
@@ -56,9 +55,9 @@
         "Id": 2938
       },
       {
-        "FaceIdName": "Office Links",
+        "ControlIdName": "Office Links",
         "BeginGroup": false,
-        "BuiltIn": false,
+        "BuiltIn": true,
         "Caption": "&Liaisons Office",
         "DescriptionText": "",
         "Enabled": true,
@@ -71,32 +70,7 @@
         "TooltipText": "&Liaisons Office",
         "Type": 14,
         "Visible": true,
-        "Controls": [
-          {
-            "ControlIdName": "Word Merge",
-            "BeginGroup": false,
-            "BuiltIn": true,
-            "Type": 1,
-            "Visible": true,
-            "Id": 626
-          },
-          {
-            "ControlIdName": "Publish with Microsoft Word",
-            "BeginGroup": false,
-            "BuiltIn": true,
-            "Type": 1,
-            "Visible": true,
-            "Id": 567
-          },
-          {
-            "ControlIdName": "Analyze with Microsoft Excel",
-            "BeginGroup": false,
-            "BuiltIn": true,
-            "Type": 1,
-            "Visible": true,
-            "Id": 566
-          }
-        ]
+        "Id": 2598
       },
       {
         "ControlIdName": "About",
